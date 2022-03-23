@@ -3,13 +3,12 @@ layout: post
 title: 'Complex Analysis'
 ---
 
-### Examples
+### Complex Integration
 
-
-this is my block equation
+Consider the complex function $$f(t) = u(t) + iv(t),$$ defined and continous over the real interval $$I:=(a,b).$$ We now define the integral of such a function over the interval $$I$$
 
 $$
-P(\mathbf{Y} = \mathbf{y}|\mathbf{X}) = exp[{\theta } ^{T} g(\mathbf{y},\mathbf{X})]/k(\theta )
+\int_{a}^b f(t)dt = \int_{a}^b u(t)dt /= i \int_{a}^b v(t)dt
 $$
 
 
