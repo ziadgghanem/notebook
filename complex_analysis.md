@@ -13,11 +13,9 @@ $$
 \label{1.0.1}
 $$
 
-$$\hline$$
-$$\mathbf{Example}:$$ Calculate the integral $$\int_{0}^{\frac{\pi}{2}} e^{it}dt$$
-$$\mathit{Solution}: Using Euler's formula, e^{it} = cost + isint.$$
+
+$$\mathbf{Example}:$$ Calculate the integral $$\int_{0}^{\frac{\pi}{2}} e^{it}dt \\$$
+$$\mathit{Solution}: Using Euler's formula, e^{it} = cost + isint. \\$$
 $$
-\LARGE
 \int_{0}^{\frac{\pi}{2}} e^{it}dt = \int_{0}^{\frac{\pi}{2}} costdt + i \int_{0}^{\frac{\pi}{2}} sint = sint\Big|_{0}^{\frac{\pi}{2}} - i cost\Big|_{0}^{\frac{\pi}{2}} = 1 + i.
 $$
-$$\hline$$
