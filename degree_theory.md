@@ -6,7 +6,7 @@ title: 'Planar Degree Theory'
 ### Degree Theory in $$\mathbb{R}^1$$
 
 
-Intermediate value theorem: If $$ f:[a,b] \rightarrow \mathbb{R} $$ is continous with $$ f(a)f(b) \neq 0 $$
+Recall the <a href="https://en.wikipedia.org/wiki/Intermediate_value_theorem">$$\underline{Intermediate Value Theorem}:$$</a> If $$ f:[a,b] \rightarrow \mathbb{R} $$ is continous with $$ f(a)f(b) \neq 0 $$
 then $$\exists c \in (a,b)$$ such that $$f(c) = 0.$$
 
 Take $$\Omega \subset \mathbb{R},$$ a bounded open set. For simplicity, suppose $$\Omega$$ can be 
@@ -23,4 +23,4 @@ $$(2) \mathbf{Homotopy}:$$ Let $$h_t: \overline{\Omega} \rightarrow \mathbb{R}$$
 $$t\in \[0,1\]$$ and $$x \in \Omega$$ such that the family, $$(h_t, \Omega),$$ is admissible $$\forall t.$$ Then $$h_t$$
 is called an $$\Omega$$-admissible homotopy between $$h_0$$ and $$h_1.$$
 
-$$deg(h_t, \Omega)$$ is constant, that is the degree is independent of the parameter $t.$$
+$$deg(h_t, \Omega)$$ is constant, that is, the degree is independent of the parameter $$t.$$
