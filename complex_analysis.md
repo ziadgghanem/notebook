@@ -5,10 +5,19 @@ title: 'Complex Analysis'
 
 ### Complex Integration
 
-Consider the complex function $$f(t) = u(t) + iv(t),$$ defined and continous over the real interval $$I:=(a,b).$$ We now define the integral of such a function over the interval $$I$$
+Consider the complex-valued function $$f(t) = u(t) + iv(t),$$ defined and piecewise-continous over the real interval $$(a,b).$$ We define the integral of $$f$$ over $$(a,b)$$ to be
 
 $$
-\int_{a}^b f(t)dt = \int_{a}^b u(t)dt /= i \int_{a}^b v(t)dt
+\LARGE
+\int_{a}^b f(t)dt = \int_{a}^b u(t)dt + i \int_{a}^b v(t)dt
+\label{1.0.1}
 $$
 
-
+$$\hline$$
+$$\mathbf{Example}:$$ Calculate the integral $$\int_{0}^{\frac{\pi}{2}} e^{it}dt$$
+$$\mathit{Solution}: Using Euler's formula, e^{it} = cost + isint.$$
+$$
+\LARGE
+\int_{0}^{\frac{\pi}{2}} e^{it}dt = \int_{0}^{\frac{\pi}{2}} costdt + i \int_{0}^{\frac{\pi}{2}} sint = sint\Big|_{0}^{\frac{\pi}{2}} - i cost\Big|_{0}^{\frac{\pi}{2}} = 1 + i.
+$$
+$$\hline$$
