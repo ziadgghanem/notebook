@@ -8,6 +8,6 @@ title: 'Algebraic Topology'
 Fundamental Group
 Let $$X$$ be a topological space, we define a path in our space with a continous map $$\alpha: I \rightarrow X.$$
 ```
-{% raw %}{%newthought 'my note' %}{% endraw %}
+{% raw %}{%sidenote 001|'my note' %}{% endraw %}
 text explanation
 ```
