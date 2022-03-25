@@ -7,5 +7,5 @@ title: 'Algebraic Topology'
 
 Fundamental Group
 Let $$X$$ be a topological space, we define a path in our space with a continous map $$\alpha: I \rightarrow X.$$
-<p>{% newthought my note %}</p>
+{% raw %} {%newthought 'my note' %} {% endraw %}
 
