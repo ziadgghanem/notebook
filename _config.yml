@@ -25,9 +25,9 @@ transfer:
   source: _site/
 
 plugins:
-  - jekyll-fullwidth
-  - jekyll-maincolumn
-  - jekyll-marginfigure
-  - jekyll-marginnote
-  - jekyll-newthought
-  - jekyll-sidenote
+  - fullwidth
+  - maincolumn
+  - marginfigure
+  - marginnote
+  - newthought
+  - sidenote
