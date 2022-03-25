@@ -5,23 +5,6 @@ title: 'Algebraic Topology'
 
 ## Concepts
 
-Topological Equivalence
-
-$$ 
-\begin{eqnarray*} 
-
-\LARGE
-X \simeq Y \iff \exists_{\textstyle{homeomorphism} \varphi:X \rightarrow Y}
-\end{eqnarray*} 
-$$ 
-{: style="text-align: left"}
-
-Homotopy
-
-\begin{eqnarray*} 
-
-\LARGE
-X \simeq Y \iff \exists_{\textstyle{homeomorphism} \varphi:X \rightarrow Y}
-\end{eqnarray*} 
-$$ 
-{: style="text-align: left"}
+Fundamental Group
+Let $$X$$ be a topological space, we define a path in our space with a continous map $$\alpha: I \rightarrow X.$$
+<label for="mn-blue-links" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-blue-links" class="margin-toggle"/><span class="marginnote">We will use $$I$$ to denote the unit interval $$[0,1]$$</span> 
