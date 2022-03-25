@@ -7,6 +7,4 @@ title: 'Algebraic Topology'
 
 Fundamental Group
 Let $$X$$ be a topological space, we define a path in our space with a continous map $$\alpha: I \rightarrow X.$$
-
-
-% sidenote sidenote rendered at: this is a sidenote %
+{% sidenote note rendered at: this is a note %}
