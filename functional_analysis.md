@@ -9,7 +9,7 @@ title: 'Functional Analysis'
 A vector space $$V$$ together with a function $$\Vert \cdot \Vert : V \rightarrow \mathbb{R}$$ satisfying:
 $$\\ \forall v\in V, \forall r\in \mathbb{R}$$ we have 
 1.  $$\Vert v \Vert \ge 0$$ and $$\Vert v \Vert = 0 \iff v = 0$$
-2.  $$\Vert rV \Vert = \vert r \vert \Vert v \Vert$$
+2.  $$\Vert rV \Vert$$ $$=$$ $$\vert r \vert \Vert v \Vert$$
 3.  $$\Vert u+v \Vert \le \Vert v \Vert + \Vert u \Vert$$
 is called a normed space and the function $$\Vert \cdot \Vert$$ is called a norm on $$V.$$
 
@@ -23,7 +23,7 @@ indeed it is sufficient to take $$d(u,v) := \Vert u-v \Vert.$$
 
 Furthermore, it is the case that any metric space $$(V,d)$$ is in addition a topological space $$(V, {\Large \tau})$$ where
 $${\Large \tau}$$ is a collection of subsets of $$V,$$ called a topology on $$V,$$ satisfying:
-1.  $$V, \emptyset \in {\Large \tau}$$
+1.  $$V, \emptyset \in {\Large \tau}$$ $$ $$
 2.  $$\{ U_{\alpha} \}_{\alpha \in \Lambda} \subset {\Large {\Large \tau}} \rightarrow \bigcup_{\alpha \in \Lambda}U_{\alpha} \in {\Large \tau}$$
 3.  $$\{ \, U_{\alpha_1}, U_{\alpha_2}, \ldots , U_{\alpha_n} \, \} \subset {\Large \tau} \rightarrow U_{\alpha_1} \bigcap U_{\alpha_2} \bigcap \cdots \bigcap U_{\alpha_n} \in {\Large \tau}$$ 
 
