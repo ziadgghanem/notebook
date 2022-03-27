@@ -39,41 +39,43 @@ Or equivalently,
 
 Where $$B_{\epsilon}(u) := \{v \in V: \| u - v \| < \epsilon\}$$ is the open ball of radius $$\epsilon$$ centered at $$u$$.
 
-*Useful notation for Set Manipulation*
+*Set Manipulation*
 
 We will use $$A + B$$ to denote the algebraic sum of sets $$A,B \subset V$$  
-- $$A + B := \{a + b: a \in A, b \in B\}$$ $$$$
+- $$A + B := \{a + b: a \in A, b \in B\}$$ $$\\$$
+
 $$x_0 + A$$ is for us algebraic sum of an element $$x_0 \in V$$ with the set $$A \subset V\textstyle$$
-- $$x_0 \in V \qquad x_0 + A := \{x_0 + a: a \in A\}$$ $$$$
+- $$x_0 \in V \qquad x_0 + A := \{x_0 + a: a \in A\}$$ 
+
 And by $$rA$$ we mean the scalar multiplication of a set $$A \subset V$$ with the real number $$r \in \mathbb{R}$$
 - $$r \in \mathbb{R} \qquad rA := \{ra: a \in A\}$$ $$$$
 
-** Proposition 1.01 **
+**Proposition 1.01**
+$$\\$$
+1. $$ B_{\epsilon}(x_0) = x_0 + B_{\epsilon}(0) = x_0 + \epsilon B_1(0) $$ $$ \tag{..1.01a} \label{1.01a} $$
+2. $$ B_{\epsilon}(x_0) + B_{\delta}(y_0) = (x_0+y_0) + (\epsilon + \delta)B_{1}(0) $$   $$ \tag{..1.01b} \label{1.01b} $$
 
-$$ 
-\begin{eqnarray} 
-\Large
-B_{\epsilon}(x_0) = x_0 + B_{\epsilon}(0) = x_0 + \epsilon B_1(0) \tag{..1.01a} \label{1.01a} \\
-\Large
-B_{\epsilon}(x_0) + B_{\delta}(y_0) = (x_0+y_0) + (\epsilon + \delta)B_{1}(0) \tag{..1.01b} \label{1.01b}
-\end{eqnarray} 
-$$ 
-{: style="text-align: center"}
+***Proof 1.01b***
+$$\\$$
+$$(\rightarrow)$$ Suppose $$x \in B_{\epsilon}(0) \iff \Vert x \Vert < \epsilon$$ and $$y \in B_{\delta}(0) \Vert y \Vert < \delta$$
+then $$\Vert x + y \Vert < \Vert x \Vert + \Vert y \Vert < \epsilon + \delta$$ such that $$x+y \in B_{\epsilon + \delta}(0) \\$$
+$$(\leftarrow)$$ Take $$z \in B_{\epsilon + \delta}(0) \iff \Vert z \Vert < \epsilon + \delta$$ Now choose $$x = \frac{\epsilon}{\epsilon + \delta} z$$ and $$y = \frac{\delta}{\epsilon + \delta} z$$ such that $$\Vert x \Vert < \epsilon \iff x \in B_{\epsilon}(0),$$ $$\Vert y \Vert < \delta \iff y \in B_{\delta}(0),$$ and $$z = x+y \in B_{\epsilon}(0) + B_{\delta}(0)$$
 
-*** Proof ***
+<hr>
 
-** Proposition 1.02 **
+**Proposition 1.02**
+$$\\$$
 Let $$(V, \|\cdot\|)$$ be a normed space with topology $${\Large \tau},$$ then
-1. The following functions are continous: 
-    1. $$ + : V \cross V \rightarrow V $$ $$$$
-    2. $$ \cdot : R \cross V \rightarrow V $$ $$$$
+1. The following functions are continous: $$\tag{..1.02a} \label{1.02a}$$
+    1. $$ + : V \times V \rightarrow V $$ $$$$
+    2. $$ \cdot : R \times V \rightarrow V $$ $$$$
     3. $$ \Vert \cdot \Vert : V \rightarrow R $$ $$$$
 2. $$U \in {\Large \tau} \Rightarrow \forall_{ x_{0} \in V} x_{0} + U \in {\Large \tau}$$ $$\tag{..1.02b} \label{1.02b}$$
 3. $$U \in {\Large \tau} \Rightarrow \forall_{ r \neq 0} rU \in {\Large \tau}$$ $$\tag{..1.02c} \label{1.02c}$$
 
 
-*** Proof ***
-1.0.2a:
+***Proof 1.0.2b:***
+$$\\$$
 Let $$U \in {\Large \tau}$$ then $$\forall_{ x \in U} \exists_{\epsilon > 0} B_{\epsilon}(x) \subset U$$
 So, $$\forall_{ x_{0} \in V} x_0 + B_{\epsilon}(x) \subset x_0 + U $$
 By (1.01a) this is equivalent to $$ B_{\epsilon}(x+x_0) \subset x_0 + U \iff x_0 + U \in {\Large \tau}$$
