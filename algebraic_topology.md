@@ -41,3 +41,15 @@ $$
 \Large
 \hat{G}(X) := \{ \, \langle \alpha \rangle \mid \alpha \in G(X) \, \}
 $$
+
+
+Triangulation \\
+Let $$V:= \{ v_0,v_1, \ldots ,v_k \}$$ be points in $$\mathbb{R}^n.$$ We call the set \\
+$$\Delta:= \{ \lambda_0 v_0 + \lambda_1 v_1 + \cdots + \lambda_k v_k \Vert \lambda_i \in mathbb{R}, \sum_{i=0}^k \lambda_i = 1\}$$ \\
+the hyperplane spanned by $$V$$.\\
+We say that the points $$\{ v_0,v_1, \ldots ,v_k \}$$ are in general position if any subset of them spans a strictly smaller subset. This is equivalent to the condition that the set of vectors $$\{ v_1 - v_0,v_2 - v_0, \ldots ,v_k - v_0 \}$$ is linearly independent. \\
+Given $$k+1$$ points $$V:= \{ v_0,v_1, \ldots ,v_k \}$$ in general position, we call the smalles convex set containing them a k-simplex with vertices $$\{ v_0,v_1, \ldots ,v_k \}.$$ \\
+If $$A,B$$ are simplexes and the vertices of B are some subset of the vertices of A then we say that B is a face of the simplex A. \\
+Definition: A finite collection of simplexes in $$\mathbb{R}^n$$ is called a simplicial complex if whenever a ssimplex lies in the collection then so does each of its faces and whenever two simplexes of the collection intersect they do so in a common face. \\
+We call a topological space *triangulable* if it is homeomorphic to a simplicial complex.
+
