@@ -29,10 +29,10 @@ $$
 We are interested in using loops to distinguish between topological spaces. 
 
 **Theorem** \\
-Let $$X$$ be a topological space. The set of loops in $$X$$ based at $$p$$ forms a group, $$\Large{\pi}_1(X,p): = \{ <\alpha> \quad \Vert \quad \alpha(0)=\alpha(1), \, \alpha:I \rightarrow X \}$$ with multiplication $$<\alpha> \circ <\beta> = <\alpha \circ \beta>$$
+Let $$X$$ be a topological space. The set of loops in $$X$$ based at $$p$$ forms a group, $${\Large \pi}_1(X,p): = \{ <\alpha> \quad \Vert \quad \alpha(0)=\alpha(1), \, \alpha:I \rightarrow X \}$$ with multiplication $$<\alpha> \circ <\beta> = <\alpha \circ \beta>$$
 
 ***Proof*** \\
-0. $$\Large{\pi}_1(X,p),$$ is well defined. \\
+0. $${\Large \pi}_1(X,p),$$ is well defined. \\
 For $$\alpha \simeq \alpha^{'}, \beta \simeq \beta^{'}$$ we have $$\alpha \circ \beta \simeq \alpha^{'} \circ \beta^{'}$$
 1. *Associativity* $$(<\alpha> \circ <\beta>) \circ <\gamma> = <\alpha> \circ (<\beta> \circ <\gamma>)$$ \\
 $$(\alpha \circ \beta) \circ \gamma = \alpha \circ (\beta \circ \gamma)$$
@@ -45,6 +45,28 @@ We say that $$X$$ is simply connected if it is path connected and $$\Large{\pi}_
 **Lemma** \\
 $$X$$ is simply connected iff there exists a unique homotopy class of paths between any two paths in $$X$$.
  
+<hr>
+
+## Complete Classification of Surfaces
+
+A surface is closed if it is compact, connected, and has no boundary. To claim closed surfaces can be *classified* is to allege that a set of topologically distince classes can be composed such that, for any closed surface $$X$$ there exists exactly one class $$<X>$$ and any other closed surface $$Y \in <X>$$ is homeomorphic to $$X.$$
+
+**Classification Theorem** \\ 
+Any closed surface is homeomorphic one of the following:
+1. The sphere.
+2. The sphere with a finite number of handles.
+3. The shere with a finite number of disks removed and replaced with mobius strips.
+
+How do we add a handle to the sphere? First we remove the interiors of a pair of disjoint discs, then we attach a cylinder by glueing its boundary circles to the boundary circles of the chosen discs. To add further handles we repeat this procedure with another pair of discs and cylinder.
+
+**Lemma**
+Every closed surface $$S$$ can be triangulated.
+
+***Outline of Proof***
+Consider a closed surface $$S$$. As $$S$$ is closed, it must be compact and so it can be converred by a finite collection of closed discs whose union is $$S$$. Moreover we can find a finite cover such that the boundaries of any two discs
+meet with an at most finite number of points and arcs. Such a cover can be partitioned into a finite number of disjoint *patches* each homeomorphic to the disc. Hence, each patch is triangulable and the triangulation of the partitioned cover returns a finite cover of disjoint triangles which covers our surface $$S$$.
+
+A surface is said to be orientable if it has two "sides" which can each be seperately colored. Equivalently, a surface is orientable if it does not contain a copy of the mobius strip.
 <hr>
 
 Triangulation \\
