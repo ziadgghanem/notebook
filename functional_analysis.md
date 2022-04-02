@@ -96,3 +96,32 @@ and furthermore $$\Vert \cdot \Vert_{1}$$ is said to be weaker than $$\Vert \cdo
 **Theorem 1.03** \\
 Given two norms $$\Vert \cdot \Vert_{1}, \Vert \cdot \Vert_{2}$$ on a vector space $$V$$ \\
 $${\Large \tau}_{1} \subset {\Large \tau}_{2} \iff \exists_{c > 0} \forall_{x \in V} \Vert \cdot \Vert_{1} \leq c\Vert \cdot \Vert_{2}$$ 
+
+***Proof 1.0.2b:*** \\
+$$(\rightarrow)$$ Suppose $${\Large \tau}_{1} \subset {\Large \tau}_{2},$$ then if
+
+<hr>
+
+# Linear operators
+Given two normed spaces, $$(V, \|\cdot\|)$$ and $$(W, \|\cdot\|)$$, consider the linear operator $$T: V \rightarrow W$$ \\
+Notice, if $$dimV < \inf$$ then $$T$$ must be continuous, if however, $$dimV = \inf$$ $$T$$ might be discontinuous. We will later provide an example of a linear operator $$f:V\rightarrow W$$ with infinite dimensional domain st $$f$$ iss discontinuous. \\
+
+**Definition** \\
+$$T: V \rightarrow W$$ is continous $$\iff$$
+
+$$
+\Large
+\forall_{x\in V} \forall_{\epsilon > 0} \, \exists_{\delta > 0} \, \forall_{y \in V} \quad \| x-y \| < \delta \rightarrow \| Tx-Ty \| < \epsilon
+$$
+
+**Proposition** \\
+Let $$T: V \rightarrow W$$ be a linear operator. The following conditions are equivalent:
+1. T is continuous
+2. T is continuous at $$0\in V$$
+3. $$T(B)$$ is bounded in $$W$$. Where $$B:= \{ x\in V \Vert \| x \| \leq 1 \} is the unit ball in $$V$$.
+4. The operrator norm of T, $$\| T \|:= \sup_{x\in B} \| Tx \| < \inf$$
+
+***Proof*** \\
+(1) $$\rightarrow$$ (2) is immediate \\
+(2) $$\rightarrow$$ (1) \\
+Suppose $$T$$ is continuous at $$0$$ i.e. $$\forall_{x\in V} \forall_{\epsilon > 0} \, \exists_{\delta > 0} \quad \| x \| < \delta \rightarrow \| Tx \| < \epsilon $$ choose $$y,z \in V$$ such that $$x = y-z$$ then $$\| x \| < \delta \iff \| y-z \| < \delta \rightarrow \| Tx \| < \epsilon \iff \| T(y-z) \| = \| Ty-Tz) \|< \epsilon$$ 
