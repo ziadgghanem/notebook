@@ -49,7 +49,8 @@ $$X$$ is simply connected iff there exists a unique homotopy class of paths betw
 
 ## Complete Classification of Surfaces
 
-A surface is closed if it is compact, connected, and has no boundary. To claim closed surfaces can be *classified* is to allege that a set of topologically distince classes can be composed such that, for any closed surface $$X$$ there exists exactly one class $$<X>$$ and any other closed surface $$Y \in <X>$$ is homeomorphic to $$X.$$
+A surface is said to be closed if it is compact, connected, and has no boundary. 
+A classification of the space of closed surfaces is a list of topologically distinct classes such that, given any closed surface $$S$$, one has exactly one class $$S$$ and for any other closed surface $$L$$ one has $$L \in <S>$$ if and only if $$L$$ is homeomorphic to $$S$$
 
 **Classification Theorem** \\ 
 Any closed surface is homeomorphic one of the following:
@@ -59,14 +60,24 @@ Any closed surface is homeomorphic one of the following:
 
 How do we add a handle to the sphere? First we remove the interiors of a pair of disjoint discs, then we attach a cylinder by glueing its boundary circles to the boundary circles of the chosen discs. To add further handles we repeat this procedure with another pair of discs and cylinder.
 
-**Lemma**
+**Lemma** \\
 Every closed surface $$S$$ can be triangulated.
 
-***Outline of Proof***
+***Outline of Proof*** \\
 Consider a closed surface $$S$$. As $$S$$ is closed, it must be compact and so it can be converred by a finite collection of closed discs whose union is $$S$$. Moreover we can find a finite cover such that the boundaries of any two discs
 meet with an at most finite number of points and arcs. Such a cover can be partitioned into a finite number of disjoint *patches* each homeomorphic to the disc. Hence, each patch is triangulable and the triangulation of the partitioned cover returns a finite cover of disjoint triangles which covers our surface $$S$$.
 
-A surface is said to be orientable if it has two "sides" which can each be seperately colored. Equivalently, a surface is orientable if it does not contain a copy of the mobius strip.
+A surface $$S$$ is said to be orientable if it has one of the following equivalent properties:
+1. $$S$$ has two "sides" which can each be seperately colored. 
+2. Any loop in the surface does not change direction.
+3. $$S$$ does not contain a copy of the mobius strip.
+
+**Lemma** \\
+Any loop that changes direction is itself a copy of the mobius strip so we have, in fact, that A closed surface is non-orientable if and only if it contains a mobius strip.
+
+**Definition** \\
+Let $$S$$ be any triangulable surface. Let $$v$$ be the number of vertices, $$e$$ the number of edges and $$t$$ the number of triangles used in triangulation. Then the Euler Characteristic of $$S$$ is $$\chi(S) = v - e + t.$$
+
 <hr>
 
 Triangulation \\
