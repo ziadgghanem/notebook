@@ -5,9 +5,10 @@ title: 'Planar Degree Theory'
 
 ### Degree Theory in $$\mathbb{R}^1$$
 
-
+<aside>
 Recall the <a href="https://en.wikipedia.org/wiki/Intermediate_value_theorem">Intermediate Value Theorem:</a> If $$ f:[a,b] \rightarrow \mathbb{R} $$ is continous with $$ f(a)f(b) \neq 0 $$
 then $$\exists c \in (a,b)$$ such that $$f(c) = 0.$$
+</aside>
 
 Take $$\Omega \subset \mathbb{R},$$ a bounded open set. For simplicity, suppose $$\Omega$$ can be 
 constructed as the finite, disjoint union of open intervals. Take also $$f: \overline{\Omega} \rightarrow \mathbb{R}$$
@@ -111,7 +112,7 @@ Now let's evaluate $$A$$ with its characteristic polynomial:
 $$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot Id_{2 \times 2} $$
 
  $$  \Large
- \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} 
+= \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} 
  - (a+d) \begin{pmatrix}a & b\\\ c & d\end{pmatrix}
  + \begin{pmatrix}ad - bc & 0\\\ 0 & ad - bc\end{pmatrix} 
  $$
