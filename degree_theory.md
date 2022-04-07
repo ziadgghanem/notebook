@@ -106,13 +106,28 @@ If in addition $$(A,*)$$ is commutative, we have $$x*(x*x) = x^3 = \gamma_{1}(x)
 
 Recall that for any $$n \times n$$ matrix $$A$$ with characteristic polynomial $$P( \lambda ) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n$$
 then $$P(A) =  a_0 + a_1 A + \cdots + a_n A^n = 0$$ i.e. in general, any square matrix $$A$$ annihilates its own characteristic polynomial. We will show this is the case for $$n=2$$ \\
-Take $$A =  \begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$ it is well known that the characteristic polynomial of a $$2x2$$ matrix is given by $$ P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$ where $$\det(A) = (ad - bc)$$ and $$\operatorname{Tr}(A) = a + d$$ \\
-So $$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot Id_{2 \times 2}
+Take $$A =  \begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$ it is well known that the characteristic polynomial of a $$2x2$$ matrix is given by $$ P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$ where $$\det(A) = ad - bc$$ and $$\operatorname{Tr}(A) = a + d$$. \\
+Now let's evaluate $$A$$ with its characteristic polynomial: 
+$$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot Id_{2 \times 2} $$
+
+ $$  \Large
  \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} 
  - (a+d) \begin{pmatrix}a & b\\\ c & d\end{pmatrix}
  + \begin{pmatrix}ad - bc & 0\\\ 0 & ad - bc\end{pmatrix} 
+ $$
+
+ $$  \Large
  = \begin{pmatrix}a^2 + bc - a^2 - ad + ad - bc & ab + bd - ab - db\\\ ca + dc - ac + dc & cb + d^2 - ad - d^2 + ad -bc\end{pmatrix}
- = \begin{pmatrix}0 & 0\\\ 0 & 0\end{pmatrix} $$
+ = \begin{pmatrix}0 & 0\\\ 0 & 0\end{pmatrix}
+ $$
+
+Now, $$x*(x*y) = x*(J_A(x)y) = J_A(x) J_A(x) y = J_A(x)^2 y$$ using properties of the left multiplication matrix $$J_A(x)$$ which is a $$2 \times 2$$ matrix with characteristic polynomail $$P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$
+where: \\
+$$ P(J_A(x)) = J_A(x)^2 - \operatorname{Tr}(J_A(x)) J_A(x) + \det(J_A(x)) \cdot Id_{2 \times 2} = 0 $$ \\
+$$ \rightarrow J_A(x)^2 = \operatorname{Tr}(J_A(x)) J_A(x) - \det(J_A(x)) \cdot Id_{2 \times 2}$$ \\
+$$ \rightarrow J_A(x)^2 y = \operatorname{Tr}(J_A(x)) J_A(x) y - \det(J_A(x)) y $$ \\
+$$ \rightarrow x*(x*y) = \gamma_{1}(x)(x*y) -  \gamma_{2}(x) y$$
+
 
 
 
