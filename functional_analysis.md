@@ -104,7 +104,7 @@ $$(\rightarrow)$$ Suppose $${\Large \tau}_{1} \subset {\Large \tau}_{2},$$ then 
 
 # Linear operators
 Given two normed spaces, $$(V, \|\cdot\|)$$ and $$(W, \|\cdot\|)$$, consider the linear operator $$T: V \rightarrow W$$ \\
-Notice, if $$dimV < \inf$$ then $$T$$ must be continuous, if however, $$dimV = \inf$$ $$T$$ might be discontinuous. We will later provide an example of a linear operator $$f:V\rightarrow W$$ with infinite dimensional domain st $$f$$ iss discontinuous. \\
+Notice, if $$dimV < \infty$$ then $$T$$ must be continuous, if however, $$dimV = \infty,$$ $$T$$ might be discontinuous. We will later provide an example of a linear operator $$f:V\rightarrow W$$ with infinite dimensional domain st $$f$$ is discontinuous. 
 
 **Definition** \\
 $$T: V \rightarrow W$$ is continous $$\iff$$
@@ -118,10 +118,11 @@ $$
 Let $$T: V \rightarrow W$$ be a linear operator. The following conditions are equivalent:
 1. T is continuous
 2. T is continuous at $$0\in V$$
-3. $$T(B)$$ is bounded in $$W$$. Where $$B:= \{ x\in V \Vert \| x \| \leq 1 \} is the unit ball in $$V$$.
-4. The operrator norm of T, $$\| T \|:= \sup_{x\in B} \| Tx \| < \inf$$
+3. $$T(B)$$ is bounded in $$W$$, where $$B:= \{ x\in V \Vert \| x \| \leq 1 \}$$ is the unit ball in $$V$$.
+4. The operator norm of T is bounded, i.e. $$\| T \|:= \sup_{x\in B} \| Tx \| < \infty$$
 
 ***Proof*** \\
 (1) $$\rightarrow$$ (2) is immediate \\
 (2) $$\rightarrow$$ (1) \\
-Suppose $$T$$ is continuous at $$0$$ i.e. $$\forall_{x\in V} \forall_{\epsilon > 0} \, \exists_{\delta > 0} \quad \| x \| < \delta \rightarrow \| Tx \| < \epsilon $$ choose $$y,z \in V$$ such that $$x = y-z$$ then $$\| x \| < \delta \iff \| y-z \| < \delta \rightarrow \| Tx \| < \epsilon \iff \| T(y-z) \| = \| Ty-Tz) \|< \epsilon$$ 
+Suppose $$T$$ is continuous at $$0$$ i.e. $$\forall_{x\in V} \forall_{\epsilon > 0} \, \exists_{\delta > 0} \quad \| x \| < \delta \rightarrow \| Tx \| < \epsilon $$ choose $$y,z \in V$$ such that $$x = y-z$$ then $$\| x \| < \delta \iff \| y-z \| < \delta \rightarrow \| Tx \| < \epsilon \iff \| T(y-z) \| = \| Ty-Tz) \|< \epsilon$$ \\
+(2) $$\rightarrow$$ (3) \\
