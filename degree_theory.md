@@ -32,7 +32,7 @@ we have
 
 ### algebras and the existence of bounded/periodic solutions to dynamical systems 
 
-Definitionss: Let $$V$$ be a vector space over a field $$K$$ (either $$\mathbb{R}$$ or $$\mathbb{C}$$). We equip $$V$$ with an additional operation $$*: V \cross V \rightarrow V$$ satisfying the properties: $$\forall a,b,c \in V \, \forall \alpha, \beta \in K$$
+Definitionss: Let $$V$$ be a vector space over a field $$K$$ (either $$\mathbb{R}$$ or $$\mathbb{C}$$). We equip $$V$$ with an additional operation $$*: V \times V \rightarrow V$$ satisfying the properties: $$\forall a,b,c \in V \, \forall \alpha, \beta \in K$$
 1. (Right Distributivity) $$(\alpha a + \beta b) * c = \alpha(a*c) + \beta(b*c)$$
 2. (Left Distributivity) $$c * (\alpha a + \beta b) = \alpha(c*a) + \beta(c*b)$$
 Then we say that $$V$$ is an algebra over the field $$K$$ or we may call $$V$$ a $$K$$-algebra and write $$(V, *)$$. 
@@ -87,18 +87,32 @@ Given an algebra $$(A,*)$$ take a fixed element $$x \in A.$$ We define
 
 Take $$(\mathbb{C}, \cdot)$$ the complex numbers with their usual multiplication. Choose $$z_1 = (x_1,y_1), z_2 = (x_2,y_2)$$ we have $$z_1 \cdot z_2 = (x_1 x_2 - y_1 y_2, x_1 y_2 + x_2 y_1)$$ the right multiplication matrix is
 
-$$ J_A(z_1) =  \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}$$
+$$ \Large J_A(z_1) =  \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}$$
 
-$$ J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix}$$
+$$  \Large J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix}$$
 
 With determinant $$\det J_A(x) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$
 
 
-**Theorem:** 
+**Theorem (Cayley-Hamilton):** 
 
-Let $$(A,*)$$ be a $$2-$$dimensional algebra, then
+Let $$(A,*)$$ be a $$2-$$dimensional algebra, then $$ \forall x,y \in A x*(x*y) = \gamma_{1}(x) (x*y) - \gamma_{2}(x) y$$ \\
 
-$$ \forall x,y \in A x*(x*y) = \gamma_{1}(x) (x*y) - \gamma_{2}(x) y$$
+**Corollary**
+
+If in addition $$(A,*)$$ is commutative, we have $$x*(x*x) = x^3 = \gamma_{1}(x) x^2 - \gamma_{2}(x) x$$ 
+
+***Proof***
+
+Recall that for any $$n \times n$$ matrix $$A$$ with characteristic polynomial $$P( \lambda ) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n$$
+then $$P(A) =  a_0 + a_1 A + \cdots + a_n A^n = 0$$ i.e. in general, any square matrix $$A$$ annihilates its own characteristic polynomial. We will show this is the case for $$n=2$$ \\
+Take $$A =  \begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$ it is well known that the characteristic polynomial of a $$2x2$$ matrix is given by $$ P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$ where $$\det(A) = (ad - bc)$$ and $$\operatorname{Tr}(A) = a + d$$ \\
+So $$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot Id_{2 \times 2}
+ \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} 
+ - (a+d) \begin{pmatrix}a & b\\\ c & d\end{pmatrix}
+ + \begin{pmatrix}ad - bc & 0\\\ 0 & ad - bc\end{pmatrix} 
+ = \begin{pmatrix}a^2 + bc - a^2 - ad + ad - bc & ab + bd - ab - db\\\ ca + dc - ac + dc & cb + d^2 - ad - d^2 + ad -bc\end{pmatrix}
+ = \begin{pmatrix}0 & 0\\\ 0 & 0\end{pmatrix} $$
 
 
 
