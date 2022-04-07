@@ -25,7 +25,7 @@ is called an $$\Omega$$-admissible homotopy between $$h_0$$ and $$h_1.$$
 
 For any $$\Omega$$-admissible homotopy, $$(h_t, \Omega),$$ deg(h_t, \Omega)$$ is constant, that is, the degree is independent of the parameter $$t.$$
 
-$$(3) \; \mathbf{Nomralization}:$$ For all admissible pairs, $$(f, \Omega),$$ with $$\Omega$$ an open, bounded set and $$f(t) = t - t_0$$
+$$(3) \; \mathbf{Normalization}:$$ For all admissible pairs, $$(f, \Omega),$$ with $$\Omega$$ an open, bounded set and $$f(t) = t - t_0$$
 we have 
 
 <hr>
@@ -53,7 +53,8 @@ For our purposes, an algebra satisfying atleast one of the above properties will
 4. $$(M(n,K), \cdot)$$ The group of $$n \cross n$$ matrices with entries from field $$K$$ with the usual matrix multiplication. is *associative,* *unital* but *not commutative*
 5. $$((C[a,b], K),*)$$ The space of functions continous over the interval $$[a,b] \subset K$$ with the usual function multiplication $$f*g = f(x) \cdot g(x) \, \forall x \in [a,b]$$ is *commutative,* *associative* and *unital*
 
-**Terminology: Finite Dimensional Algebras** \\
+**Terminology: Finite Dimensional Algebras** 
+
 If the underlying vector space $$A$$ is finite-dimensional then we say $$(A,*)$$ is a finite dimensional algebra.
 
 Given an $$n-$$ dimensional vector space $$A$$ one might want to define a multiplication $$*$$ on this space to construct an algebra $$(A,*).$$ This can be achieved as follows:
@@ -62,7 +63,8 @@ Given an $$n-$$ dimensional vector space $$A$$ one might want to define a multip
 3. In general we will need to specify $$n^3$$ coefficients $$\alpha_{i \, j}^{k} \in K$$ in order to define a particular multiplication over $$A$$.
 4. Suppose we wanted to define a *commutative* multiplication, then $$\forall i,j,k $$\alpha_{i \, j}^{k}= $$\alpha_{j \, i}^{k}$$
 
-***Example*** \\
+***Example*** 
+
 Take $$\mathbb{C}$$ and define the usual complex multiplication $$*$$ using the above strategy. 
 
 We have the standard basis $$e_1 = (1,0), e_2 = (0,1)$$. As complex multiplication is *commutative* it is sufficient to define three products: 
@@ -74,13 +76,15 @@ So for $$x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{C}$$ we have
 
 $$ (x_1, x_2)*(y_1, y_2) = (\alpha_{11}x_1y_1 + \alpha_{31}x_2y_2, \alpha_{22}x_1y_2 + \alpha_{22}x_2y_2) = (x_1y_1 - x_2y_2, x_1y_2 + x_2y_2)$$
 
-**Definition: Left Multiplication Matrix, norm, trace** \\
+**Definition: Left Multiplication Matrix, norm, trace** 
+
 Given an algebra $$(A,*)$$ take a fixed element $$x \in A.$$ We define 
 1. The so-called *left multiplication matrix* $$J_A(x): A \rightarrow A$$ is $$ J_A(x) \cdot y := x * y$$
 2. The norm of A $$ \gamma_2 := \det J_A(x)$$
 3. The trace of A $$\gamma_1 := \operatorname{Tr} J_A(x)$$
 
-***Example*** \\
+***Example*** 
+
 Take $$(\mathbb{C}, \cdot)$$ the complex numbers with their usual multiplication. Choose $$z_1 = (x_1,y_1), z_2 = (x_2,y_2)$$ we have $$z_1 \cdot z_2 = (x_1 x_2 - y_1 y_2, x_1 y_2 + x_2 y_1)$$ the right multiplication matrix is
 
 $$ J_A(z_1) =  \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}$$
@@ -90,7 +94,8 @@ $$ J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmat
 With determinant $$\det J_A(x) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$
 
 
-**Theorem:** \\
+**Theorem:** 
+
 Let $$(A,*)$$ be a $$2-$$dimensional algebra, then
 
 $$ \forall x,y \in A x*(x*y) = \gamma_{1}(x) (x*y) - \gamma_{2}(x) y$$
