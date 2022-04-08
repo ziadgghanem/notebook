@@ -2,6 +2,41 @@
 layout: post
 title: 'Complex Analysis'
 ---
+### Complex Power Series
+
+A complex power series centered at a point $$z_0$$ has the form
+
+$$ \sum_{n=0}^{\infty} a_n (z-z_0)^n \label{1}$$
+
+where the coefficients $$a_n$$ are complex constants.
+
+Every complex power series has radius of convergence $$R \ge 0$$ which specifies the largest circle centered at $$z_0,$$ $$\Vert z - z_0 \Vert = R$$ such that the series converges absolutely everywhere within the circle and diverges at every point outside the circle.
+
+There are three cases of to consider
+1. $$R=0,$$ in which case $$(1)$$ converges only at its center $$z=z_0$$
+2. $$0 < R < \infty ,$$ in which case $$(1)$$ converges for all interior points $$\Vert z - z_0 \Vert < R$$ and diverges at every point $$\Vert z - z_0 \Vert > R$$
+3. $$R= \infty ,$$ in which case $$(1)$$ converges for all $$z \in \mathbb{C}$$
+
+**The Cauchy Hadamard Formula (1888)** \\
+The radius of convergence $$R$$ of the complex power series $$(1)$$ is
+
+$$ R := \frac{1}{\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}}}$$
+
+- $$ \varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = 0 \iff R = \infty$$
+- $$ \varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = \infty \iff R = 0$$
+
+where $$\varlimsup_{n \rightarrow \infty} a_n$$ denotes the limit superior of the sequence $$a_n$$ as $$n \rightarrow \infty.$$ \\
+
+***Example:*** Find the radius of converrgence of the power series $$ \sum_{n=0}^{\infty} (1+i)^n (z)^n$$ \\
+We have coefficient $$a_n = (1+i)^n$$ \\
+with modulus $$\Vert a_n \Vert = \Vert (1+i)^n \Vert = \Vert 1+i \Vert^n = \Vert \sqrt{2} \Vert^n = 2^{\frac{n}{2}}$$ \\
+applying CHF $$R =  \lim_{n\to \infty} \frac{1}{\sqrt[n]{2^{\frac{n}{2}}}} = \frac{1}{\sqrt{2}}$$
+
+
+
+
+
+<hr>
 
 ### Complex Integration
 
