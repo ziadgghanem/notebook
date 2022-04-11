@@ -5,9 +5,39 @@ title: 'Algebraic Topology'
 
 ## Concepts
 
-Fundamental Group
+### Topological Equivalence \\
+Let $$X, Y$$ be topological spaces.
+- $$X \simeq Y \iff \exists_{\phi : \X \rightarrow Y}$$ homeomorphism.
+
+*Topological Invariant:* An algebraic object that is unchanged under homeomorphism. 
+- e.g.: $$#$$ of connected components, Euler characteristic, fundamental group.
+
+*Topological Property:* A property that is unchanced under homeomorphism
+- e.g.: compactness, connectedness, path connectedness, seperability.
+
+
+### Homotopy Equivalence \\
+Two maps $$f_0, f_1:X \rightarrow Y$$ are said to be homotopic if $$\exists$$ a map $$F:X \times I \rightarrow Y$$
+such that $$F(\cdot, 0) = f_0$$ and $$F(\cdot, 1) = f_1$$ \\
+*In this post we will use $$I$$ to denote the unit interval $$[0,1].$$*
+
+**Lemma:** Let $$C$$ be a convex space with $$f,g: X \rightarrow C$$ where $$X$$ is any topological space. Then $$f,g$$ are homotopic.
+
+*Example:* Any two maps $$f,g: S^1 \rightarrow \mathbb{R}^2$$ are homotopic.
+
+**Definition** \\
+Two topological spaces $$X,Y$$ are said to be of the same homotopy class, $$X \sim Y,$$ if and only if there exist maps $$f:X \rightarrow Y$$ and $$g:Y \rightarrrow X$$ such that
+1. $$g \circ f \sim$$ $$\mathbb{1}_{X}$$
+2. $$f \circ g \sim$$ $$\mathbb{1}_{Y}$$
+
+*Example:* $$D^2 \sim \cdot$$ i.e. the disk is homotopically equivalent to a point. \\
+- Take $$f: D^2 \rightarrow \cdot$$ as $$f(x) = p$$ and $$g: \cdot \rightarrow D^2$$ as $$g(p) = 0)
+- $$\implies$$f \circ g = \mathbb{1}_{p}$$ and, as $$D^2$$ is convex, $$g \circ f = 0 \sim \mathbb{1}_{X}$$
+
+
+### Fundamental Group \\
 Let $$X$$ be a topological space, A path in $$X$$ is a continous map $$\alpha: I \rightarrow X.$$
-*In this post we will use $$I$$ to denote the unit interval $$[0,1].$$* Lets define a composition operation on the space of paths 
+Lets define a composition operation on the space of paths 
 $$P(X):=\{ \alpha: I \rightarrow X \}$$ Consider the paths $$\alpha , \beta \in P(X)$$ with $$\alpha(0) = \beta(1) = p \in X.$$ 
 We define a new path $$\alpha \circ \beta : I \rightarrow X$$ and call it the composition of $$\alpha$$ and $$\beta.$$
 

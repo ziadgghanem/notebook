@@ -18,16 +18,19 @@ There are three cases of to consider
 3. $$R= \infty ,$$ in which case $$(1)$$ converges for all $$z \in \mathbb{C}$$
 
 **The Cauchy Hadamard Formula (1888)** \\
-The radius of convergence $$R$$ of the complex power series $$(1)$$ is
-
-$$ R := \frac{1}{\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}}}$$
-
-- $$ \varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = 0 \iff R = \infty$$
-- $$ \varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = \infty \iff R = 0$$
+The radius of convergence $$R$$ of the complex power series $$\sum_{n=0}^{\infty} a_n (z-z_0)^n$$ is
+- $$ R := \frac{1}{\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}}}$$
+- $$ R = 
+\begin{cases}
+\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = 0 \\
+\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = \infty
+\end{cases}
+$$
 
 where $$\varlimsup_{n \rightarrow \infty} a_n$$ denotes the limit superior of the sequence $$a_n$$ as $$n \rightarrow \infty.$$ \\
 
 ***Example:*** Find the radius of converrgence of the power series $$ \sum_{n=0}^{\infty} (1+i)^n (z)^n$$ \\
+*Solution:* \\
 We have coefficient $$a_n = (1+i)^n$$ \\
 with modulus $$\Vert a_n \Vert = \Vert (1+i)^n \Vert = \Vert 1+i \Vert^n = \Vert \sqrt{2} \Vert^n = 2^{\frac{n}{2}}$$ \\
 applying CHF $$R =  \lim_{n\to \infty} \frac{1}{\sqrt[n]{2^{\frac{n}{2}}}} = \frac{1}{\sqrt{2}}$$

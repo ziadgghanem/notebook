@@ -126,3 +126,9 @@ Let $$T: V \rightarrow W$$ be a linear operator. The following conditions are eq
 (2) $$\rightarrow$$ (1) \\
 Suppose $$T$$ is continuous at $$0$$ i.e. $$\forall_{x\in V} \forall_{\epsilon > 0} \, \exists_{\delta > 0} \quad \| x \| < \delta \rightarrow \| Tx \| < \epsilon $$ choose $$y,z \in V$$ such that $$x = y-z$$ then $$\| x \| < \delta \iff \| y-z \| < \delta \rightarrow \| Tx \| < \epsilon \iff \| T(y-z) \| = \| Ty-Tz) \|< \epsilon$$ \\
 (2) $$\rightarrow$$ (3) \\
+
+
+**Terminology**\\
+Let $$T:V \rightarrow W$$ be a linear operator. If $$T$$ is, in addition, continuous, we call $$T$$ a bounded operator, and $$ \Vert T \Vert$$ the operator norm of $$T$$. Finally, we define the set 
+
+$$L(V,W):= \{ T: V \rightarrow W \vert  \begin{matrix} (1) \mbox{T is linear}  \\ (2) \mbox{T is bounded} \end{matrix}   \} $$
