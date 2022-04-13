@@ -2,6 +2,31 @@
 layout: post
 title: 'Complex Analysis'
 ---
+### Complex Polynomials
+A complex polynomial has the form:
+- $$P(z) = a_n z^n + \cdots + a_0 = \sum_{k=0}^{n} a_k z^k$$
+- where $$a_k$$ are complex numbers, not identically zero and z is a complex variable.
+
+**Terminology**
+Let $$P(z) = a_n z^n + \cdots + a_0$$ be a complex polynomial.
+- If $$a_n \neq 0,$$ $$P$$ is said to be of *degree* $$n$$. \\
+- The *roots* of $$P$$ are points on the complex plane $$\lambda \in \mathbb{C}$$ where $$P(\lambda) = 0.$$
+
+**Properties (Degree of a Polynomial)**
+Let $$P,Q$$ be complex polynomials.
+1. $$deg(P+Q)$$ $$\leq max \{ deg(P),deg(Q) \}$$
+2. $$deg(cP)$$ $$= deg(P), \quad c \in \mathbb{C}$$
+3. $$deg(P \cdot Q)$$ $$= deg(P) + deg(Q)$$ where $$\cdot$$ denotes elementwise multiplication of maps. 
+4. $$deg(P \circ Q)$$ $$= deg(P) + deg(Q)$$ where $$\circ$$ denotes the composition of maps. 
+
+**Theorem (Euclidean Theorem)**
+
+
+
+
+
+<hr>
+
 ### Complex Power Series
 
 A complex power series centered at a point $$z_0$$ has the form
@@ -10,16 +35,16 @@ $$ \sum_{n=0}^{\infty} a_n (z-z_0)^n \label{1}$$
 
 where the coefficients $$a_n$$ are complex constants.
 
-Every complex power series has radius of convergence $$R \ge 0$$ which specifies the largest circle centered at $$z_0,$$ $$\Vert z - z_0 \Vert = R$$ such that the series converges absolutely everywhere within the circle and diverges at every point outside the circle.
+Every complex power series has radius of convergence $$R \ge 0$$ which specifies the largest circle centered at $$z_0,$$ $$\vert z - z_0 \vert = R$$ such that the series converges absolutely everywhere within the circle and diverges at every point outside the circle.
 
 There are three cases of to consider
 1. $$R=0,$$ in which case $$(1)$$ converges only at its center $$z=z_0$$
-2. $$0 < R < \infty ,$$ in which case $$(1)$$ converges for all interior points $$\Vert z - z_0 \Vert < R$$ and diverges at every point $$\Vert z - z_0 \Vert > R$$
+2. $$0 < R < \infty ,$$ in which case $$(1)$$ converges for all interior points $$\vert z - z_0 \vert < R$$ and diverges at every point $$\vert z - z_0 \vert > R$$
 3. $$R= \infty ,$$ in which case $$(1)$$ converges for all $$z \in \mathbb{C}$$
 
 **The Cauchy Hadamard Formula (1888)** \\
 The radius of convergence $$R$$ of the complex power series $$\sum_{n=0}^{\infty} a_n (z-z_0)^n$$ is
-- $$ R := \frac{1}{\varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}}}$$
+- $$ R := \frac{1}{\varlimsup_{n \rightarrow \infty} \vert a_n \vert^{\frac{1}{n}}}$$
 - $$ R = 
 \begin{cases}
 \varlimsup_{n \rightarrow \infty} \Vert a_n \Vert^{\frac{1}{n}} = 0 \\
@@ -27,13 +52,12 @@ The radius of convergence $$R$$ of the complex power series $$\sum_{n=0}^{\infty
 \end{cases}
 $$
 
-where $$\varlimsup_{n \rightarrow \infty} a_n$$ denotes the limit superior of the sequence $$a_n$$ as $$n \rightarrow \infty.$$ \\
+Where $$\varlimsup_{n \rightarrow \infty} a_n$$ denotes the limit superior of the sequence $$a_n$$ as $$n \rightarrow \infty.$$ 
 
 ***Example:*** Find the radius of converrgence of the power series $$ \sum_{n=0}^{\infty} (1+i)^n (z)^n$$ \\
 *Solution:* \\
-We have coefficient $$a_n = (1+i)^n$$ \\
-with modulus $$\Vert a_n \Vert = \Vert (1+i)^n \Vert = \Vert 1+i \Vert^n = \Vert \sqrt{2} \Vert^n = 2^{\frac{n}{2}}$$ \\
-applying CHF $$R =  \lim_{n\to \infty} \frac{1}{\sqrt[n]{2^{\frac{n}{2}}}} = \frac{1}{\sqrt{2}}$$
+We have $$a_n = (1+i)^n$$ with modulus $$\vert a_n \vert = \vert (1+i)^n \vert = \vert 1+i \vert^n = \vert \sqrt{2} \vert^n = 2^{\frac{n}{2}}$$ applying the formula:
+- $$R =  \lim_{n\to \infty} \frac{1}{\sqrt[n]{2^{\frac{n}{2}}}} = \frac{1}{\sqrt{2}}$$
 
 
 
