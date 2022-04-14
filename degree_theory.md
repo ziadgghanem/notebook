@@ -5,10 +5,8 @@ title: 'Planar Degree Theory'
 
 ### Degree Theory in $$\mathbb{R}^1$$
 
-<aside>
 Recall the <a href="https://en.wikipedia.org/wiki/Intermediate_value_theorem">Intermediate Value Theorem:</a> If $$ f:[a,b] \rightarrow \mathbb{R} $$ is continous with $$ f(a)f(b) \neq 0 $$
 then $$\exists c \in (a,b)$$ such that $$f(c) = 0.$$
-</aside>
 
 Take $$\Omega \subset \mathbb{R},$$ a bounded open set. For simplicity, suppose $$\Omega$$ can be 
 constructed as the finite, disjoint union of open intervals. Take also $$f: \overline{\Omega} \rightarrow \mathbb{R}$$
@@ -68,66 +66,60 @@ Given an $$n-$$ dimensional vector space $$A$$ one might want to define a multip
 
 Take $$\mathbb{C}$$ and define the usual complex multiplication $$*$$ using the above strategy. 
 
-We have the standard basis $$e_1 = (1,0), e_2 = (0,1)$$. As complex multiplication is *commutative* it is sufficient to define three products: 
-1. $$e_1 * e_1 = \alpha_{11}e_1 + \alpha_{12}e_2 = e_1$$ i.e. $$(1,0)*(1,0) = (1,0) $$ or $$1 \cdot 1 = 1$$
-2. $$e_1 * e_2 = \alpha_{21}e_1 + \alpha_{22}e_2 = e_2$$ i.e. $$(1,0)*(0,1) = (0,1) $$ or $$1 \cdot i = i$$
-3. $$e_2 * e_2 = \alpha_{31}e_1 + \alpha_{32}e_2 = -e_1$$  i.e. $$(0,1)*(0,1) = (0,1) $$ or $$i \cdot i = -1$$
+We have the standard basis $$e_1 = (1,0), e_2 = (0,1)$$. As complex multiplication is *commutative* it is sufficient to define six coefficients: $$ \begin{pmatrix} \alpha_{1} & \alpha_{2} & \alpha_{3}\\\ \beta_{1} & \beta_{2} & \beta_{3} \end{pmatrix}$$ 
+$$= \begin{pmatrix} 1 & 0 & -1\\\ 0 & 1 & 0 \end{pmatrix}$$
+1. $$e_1 * e_1 = \alpha_{1}e_1 + \beta_{1}e_2 = e_1$$ $$\iff$$ $$(1,0)*(1,0) = (1,0) $$ $$\iff$$ $$1 \cdot 1 = 1$$
+2. $$e_1 * e_2 = \alpha_{2}e_1 + \beta_{2}e_2 = e_2$$ $$\iff$$ $$(1,0)*(0,1) = (0,1) $$ $$\iff$$ $$1 \cdot i = i$$
+3. $$e_2 * e_2 = \alpha_{3}e_1 + \beta_{3}e_2 = -e_1$$ $$\iff$$ $$(0,1)*(0,1) = (-1,0) $$ $$\iff$$ $$i \cdot i = -1$$
 
-So for $$x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{C}$$ we have
-
-$$ (x_1, x_2)*(y_1, y_2) = (\alpha_{11}x_1y_1 + \alpha_{31}x_2y_2, \alpha_{22}x_1y_2 + \alpha_{22}x_2y_2) = (x_1y_1 - x_2y_2, x_1y_2 + x_2y_2)$$
+So for $$x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{C}$$ we have the expected product
+- $$ (x_1, x_2)*(y_1, y_2)$$ $$ = (\alpha_{1}x_1y_1 + \alpha_{3}x_2y_2 , \beta_{2}x_1y_2 + \beta_{2}x_2y_2) = (x_1y_1 - x_2y_2, x_1y_2 + x_2y_2)$$
 
 **Definition: Left Multiplication Matrix, norm, trace** 
 
 Given an algebra $$(A,*)$$ take a fixed element $$x \in A.$$ We define 
-1. The so-called *left multiplication matrix* $$J_A(x): A \rightarrow A$$ is $$ J_A(x) \cdot y := x * y$$
-2. The norm of A $$ \gamma_2 := \det J_A(x)$$
-3. The trace of A $$\gamma_1 := \operatorname{Tr} J_A(x)$$
+1. The so-called *left multiplication matrix* \\ $$J_A(x): A \rightarrow A$$ is $$ J_A(x) \cdot y := x * y$$
+2. The *norm of A* \\ $$ \gamma_2 := \det J_A(x)$$
+3. The *trace of A* \\ $$\gamma_1 := \operatorname{Tr} J_A(x)$$
 
 ***Example*** 
 
 Take $$(\mathbb{C}, \cdot)$$ the complex numbers with their usual multiplication. Choose $$z_1 = (x_1,y_1), z_2 = (x_2,y_2)$$ we have $$z_1 \cdot z_2 = (x_1 x_2 - y_1 y_2, x_1 y_2 + x_2 y_1)$$ the right multiplication matrix is
+- $$J_A(z_1) \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}.$$ To confirm we take $$J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix}$$
 
-$$ \Large J_A(z_1) =  \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}$$
-
-$$  \Large J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix}$$
-
-With determinant $$\det J_A(x) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$
+With norm $$\det (J_A(x)) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$ and trace $$\operatorname{Tr} J_A(x) = 2x_1$$
 
 
-**Theorem (Cayley-Hamilton):** 
-
+**Theorem (Cayley-Hamilton):** \\
 Let $$(A,*)$$ be a $$2-$$dimensional algebra, then $$ \forall x,y \in A x*(x*y) = \gamma_{1}(x) (x*y) - \gamma_{2}(x) y$$ \\
 
-**Corollary**
-
+**Corollary** \\
 If in addition $$(A,*)$$ is commutative, we have $$x*(x*x) = x^3 = \gamma_{1}(x) x^2 - \gamma_{2}(x) x$$ 
 
-***Proof***
 
-Recall that for any $$n \times n$$ matrix $$A$$ with characteristic polynomial $$P( \lambda ) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n$$
-then $$P(A) =  a_0 + a_1 A + \cdots + a_n A^n = 0$$ i.e. in general, any square matrix $$A$$ annihilates its own characteristic polynomial. We will show this is the case for $$n=2$$ \\
-Take $$A =  \begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$ it is well known that the characteristic polynomial of a $$2x2$$ matrix is given by $$ P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$ where $$\det(A) = ad - bc$$ and $$\operatorname{Tr}(A) = a + d$$. \\
-Now let's evaluate $$A$$ with its characteristic polynomial: 
-$$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot Id_{2 \times 2} $$
+**Lemma**\\ 
+for any $$n \times n$$ matrix $$A$$ with characteristic polynomial $$P( \lambda ) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n$$
+we have 
+- $$P(A) =  a_0 + a_1 A + \cdots + a_n A^n$$ $$= 0$$
 
- $$  \Large
-= \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} 
- - (a+d) \begin{pmatrix}a & b\\\ c & d\end{pmatrix}
- + \begin{pmatrix}ad - bc & 0\\\ 0 & ad - bc\end{pmatrix} 
- $$
+i.e. any square matrix $$A$$ annihilates its own characteristic polynomial. We will show this is the case for $$n=2$$ \\
+***Proof (Lemma)*** \\
+Take $$A =  \begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$ it is well known that the characteristic polynomial of a $$2x2$$ matrix is given by - $$ P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot \mathbb{1}_{2}$$ 
 
- $$  \Large
- = \begin{pmatrix}a^2 + bc - a^2 - ad + ad - bc & ab + bd - ab - db\\\ ca + dc - ac + dc & cb + d^2 - ad - d^2 + ad -bc\end{pmatrix}
- = \begin{pmatrix}0 & 0\\\ 0 & 0\end{pmatrix}
- $$
+Here we have, $$\det(A) = ad - bc$$ and $$\operatorname{Tr}(A) = a + d$$. \\
+Now let's evaluate $$A$$ with its characteristic polynomial: $$P(A) = A^2 - \operatorname{Tr}(A) A + \det(A) \cdot \mathbb{1}_{2} $$
 
-Now, $$x*(x*y) = x*(J_A(x)y) = J_A(x) J_A(x) y = J_A(x)^2 y$$ using properties of the left multiplication matrix $$J_A(x)$$ which is a $$2 \times 2$$ matrix with characteristic polynomail $$P( \lambda ) = \lambda^2 -  \operatorname{Tr}(A) \lambda + \det(A) \cdot Id_{2 \times 2}$$
-where: \\
-$$ P(J_A(x)) = J_A(x)^2 - \operatorname{Tr}(J_A(x)) J_A(x) + \det(J_A(x)) \cdot Id_{2 \times 2} = 0 $$ \\
-$$ \rightarrow J_A(x)^2 = \operatorname{Tr}(J_A(x)) J_A(x) - \det(J_A(x)) \cdot Id_{2 \times 2}$$ \\
-$$ \rightarrow J_A(x)^2 y = \operatorname{Tr}(J_A(x)) J_A(x) y - \det(J_A(x)) y $$ \\
-$$ \rightarrow x*(x*y) = \gamma_{1}(x)(x*y) -  \gamma_{2}(x) y$$
+- $$ P(A) = \begin{pmatrix}a & b\\\ c & d\end{pmatrix} \begin{pmatrix}a & b\\\ c & d\end{pmatrix} - (a+d) \begin{pmatrix}a & b\\\ c & d\end{pmatrix} + \begin{pmatrix}ad - bc & 0\\\ 0 & ad - bc\end{pmatrix} $$
+- $$ = \begin{pmatrix}a^2 + bc - a^2 - ad + ad - bc & ab + bd - ab - db\\\ ca + dc - ac + dc & cb + d^2 - ad - d^2 + ad -bc\end{pmatrix}
+ = \begin{pmatrix}0 & 0\\\ 0 & 0\end{pmatrix} $$
+
+***Proof (Cayley-Hamilton)*** \\
+Take the left multiplication matrix, $$J_A(x)$$, with characteristic polynomial $$P( \lambda ) = \lambda^2 -  \operatorname{Tr}(J_A) \lambda + \det(J_A) \cdot \mathbb{1}_{2}$$
+- Now, by Lemma we have $$ P(J_A(x)) = J_A(x)^2 - \operatorname{Tr}(J_A(x)) J_A(x) + \det(J_A(x)) \cdot \mathbb{1}_{2} = 0 $$ 
+- $$\rightarrow $$ $$ J_A(x)^2 = \operatorname{Tr}(J_A(x)) J_A(x) - \det(J_A(x)) \cdot \mathbb{1}_{2}$$
+- $$\rightarrow $$ $$ J_A(x)^2 y = \operatorname{Tr}(J_A(x)) J_A(x) y - \det(J_A(x)) y = \gamma_{1}(x)(x*y) -  \gamma_{2}(x) y$$
+- Note $$J_A(x) \cdot y := x * y$$ $$\rightarrow$$ $$x*(x*y) = x*(J_A(x)y) = J_A(x) J_A(x) y = J_A(x)^2 y$$ 
+
 
 
 
