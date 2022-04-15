@@ -78,16 +78,21 @@ So for $$x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{C}$$ we have the expected pr
 **Definition: Left Multiplication Matrix, norm, trace** 
 
 Given an algebra $$(A,*)$$ take a fixed element $$x \in A.$$ We define 
-1. The so-called *left multiplication matrix* \\ $$J_A(x): A \rightarrow A$$ is $$ J_A(x) \cdot y := x * y$$
-2. The *norm of A* \\ $$ \gamma_2 := \det J_A(x)$$
-3. The *trace of A* \\ $$\gamma_1 := \operatorname{Tr} J_A(x)$$
+1. The so-called *left multiplication matrix,* $$J_A(x): A \rightarrow A,$$ is $$ J_A(x) \cdot y := x * y$$
+2. The *norm of A:* $$ \quad \gamma_2 := \det J_A(x)$$
+3. The *trace of A:* $$\quad \gamma_1 := \operatorname{Tr} J_A(x)$$
 
-***Example*** 
+***Example*** \\
+Take $$(\mathbb{C}, \cdot)$$ the complex numbers with their usual multiplication. For any, $$z_1 = (x_1,y_1), z_2 = (x_2,y_2),$$ we should have $$z_1 \cdot z_2 = (x_1 x_2 - y_1 y_2, x_1 y_2 + x_2 y_1)$$ The appropriate left multiplication matrix is: $$J_A(z_1) = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}$$ with norm  $$\gamma_2 = \det (J_A(x)) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$ and trace $$ \gamma_1 = \operatorname{Tr} J_A(x) = 2x_1$$
+- To confirm we take $$J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix} = z_1 \cdot z_2$$
 
-Take $$(\mathbb{C}, \cdot)$$ the complex numbers with their usual multiplication. Choose $$z_1 = (x_1,y_1), z_2 = (x_2,y_2)$$ we have $$z_1 \cdot z_2 = (x_1 x_2 - y_1 y_2, x_1 y_2 + x_2 y_1)$$ the right multiplication matrix is
-- $$J_A(z_1) \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix}.$$ To confirm we take $$J_A(z_1)z_2 = \begin{pmatrix}x_1 & -y_1\\\ y_1 & x_1\end{pmatrix} \begin{pmatrix}x_2 \\\ y_2 \end{pmatrix} = \begin{pmatrix}x_1 x_2 - y_1 y_2 \\\ x_1 y_2 + x_2 y_1 \end{pmatrix}$$
+***Example*** \\
+Take $$(\mathbb{R} \bigoplus \mathbb{R}, *)$$ equipped with multiplication $$(x_1,y_1)*(x_2,y_2) = (x_1 x_2, y_1 y_2)$$ this algebra has
+1. Left multiplication matrix:  $$J_A(z_1) = \begin{pmatrix}x_1 & 0\\\ 0 & y_1\end{pmatrix}$$ 
+2. Norm: $$\gamma_2(z_1) = x_1 y_1$$
+3. Trace: $$\gamma_1(z_1) = x_1 + y_1$$
 
-With norm $$\det (J_A(x)) = x_1^2 + y_1^2 = \lVert z_1 {\rVert}_{2}^2$$ and trace $$\operatorname{Tr} J_A(x) = 2x_1$$
+
 
 
 **Theorem (Cayley-Hamilton):** \\
@@ -96,8 +101,7 @@ Let $$(A,*)$$ be a $$2-$$dimensional algebra, then $$ \forall x,y \in A x*(x*y) 
 **Corollary** \\
 If in addition $$(A,*)$$ is commutative, we have $$x*(x*x) = x^3 = \gamma_{1}(x) x^2 - \gamma_{2}(x) x$$ 
 
-
-**Lemma**\\ 
+**Lemma** \\ 
 for any $$n \times n$$ matrix $$A$$ with characteristic polynomial $$P( \lambda ) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n$$
 we have 
 - $$P(A) =  a_0 + a_1 A + \cdots + a_n A^n$$ $$= 0$$
@@ -119,6 +123,8 @@ Take the left multiplication matrix, $$J_A(x)$$, with characteristic polynomial 
 - $$\rightarrow $$ $$ J_A(x)^2 = \operatorname{Tr}(J_A(x)) J_A(x) - \det(J_A(x)) \cdot \mathbb{1}_{2}$$
 - $$\rightarrow $$ $$ J_A(x)^2 y = \operatorname{Tr}(J_A(x)) J_A(x) y - \det(J_A(x)) y = \gamma_{1}(x)(x*y) -  \gamma_{2}(x) y$$
 - Note $$J_A(x) \cdot y := x * y$$ $$\rightarrow$$ $$x*(x*y) = x*(J_A(x)y) = J_A(x) J_A(x) y = J_A(x)^2 y$$ 
+
+
 
 
 
