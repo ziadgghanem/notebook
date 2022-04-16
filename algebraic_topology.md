@@ -14,6 +14,8 @@ title: 'Algebraic Topology'
 *Topological Property:* A property that is unchanged under homeomorphism
 - e.g.: compactness, connectedness, path connectedness, seperability.
 
+<hr width="50%">
+
 *Homotopic Maps:* 
 Two maps $$f_0, f_1:X \rightarrow Y$$ are said to be homotopic if $$\exists$$ a map $$F:X \times I \rightarrow Y$$
 such that $$F(\cdot, 0) = f_0$$ and $$F(\cdot, 1) = f_1$$ 
@@ -53,6 +55,8 @@ $$f \circ g \sim$$ $$\mathbb{1}_{Y}.$$
 *n-sphere:* The n-dimensional sphere is the boundary of an $$n+1$$ dimensional n-disk
 - $$S^n$$ $$:= \{ x \in \mathbb{R}^n : \vert x \vert = 1 \}$$
 
+<hr width="50%">
+
 ### Cell Decomposition
 *n-cell:* The n-cell is any space homeomorphic to the open n-disk.
 
@@ -66,7 +70,7 @@ $$f \circ g \sim$$ $$\mathbb{1}_{Y}.$$
 **Proposition:** A C.W. complex is a topological space $$X$$ and a sequence of n-skeletons such that
 - $$\emptyset \subset X^0 \subset X^1 \subset \cdots \subset X^n \subset \cdots \subset X$$
 
-**Proposition:** Let $$(X,\mathcal{E})$$ be a C.W. complex. The n-skeleton $$X^n$$ is obtained recursively from $$X^{n-1}$$ by attatching the boundaries of n-cells to the $$n-1$$ skeleton via maps $$\phi_i: \del D^n_{i} \rightarrow X^{n-1}$$
+**Proposition:** Let $$(X,\mathcal{E})$$ be a C.W. complex. The n-skeleton $$X^n$$ is obtained recursively from $$X^{n-1}$$ by attatching the boundaries of n-cells to the $$n-1$$ skeleton via maps $$\phi_i: \partial D^n_{i} \rightarrow X^{n-1}$$
 
 ### Excercises
 
