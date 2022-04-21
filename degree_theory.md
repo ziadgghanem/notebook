@@ -48,8 +48,8 @@ For our purposes, an algebra satisfying atleast one of the above properties will
 ***Examples***
 1. $$(\mathbb{C}, \cdot)$$ The complex numbers with standard complex multiplication is *commutative,* *associative* and *unital*
 2. $$(\bar{\mathbb{C}}, *)$$ The complex numbers with the following multiplication: $$\forall z_1, z_2 \in \mathbb{C} \quad z_1 * z_2 = \bar{z_1} * \bar{z_2}$$ is *commutative,* *associative* but *not unital*
-3. $$(\mathbb{R} \widehat{\bigoplus} \mathbb{R}, *)$$ with the following multiplication: $$ \forall u = (u_1, u_2) v = (v_1, v_2) \quad u*v = (u_1v_1, u_2,v_2)$$ is *commutative,* *associative* and *unital*
-4. $$(M(n,K), \cdot)$$ The group of $$n \cross n$$ matrices with entries from field $$K$$ with the usual matrix multiplication. is *associative,* *unital* but *not commutative*
+3. $$(\mathbb{R} \bigoplus \mathbb{R}, *)$$ with the following multiplication: $$ \forall u = (u_1, u_2) v = (v_1, v_2) \quad u*v = (u_1v_1, u_2,v_2)$$ is *commutative,* *associative* and *unital*
+4. $$(M(n,K), \cdot)$$ The group of $$n \times n$$ matrices with entries from field $$K$$ with the usual matrix multiplication. is *associative,* *unital* but *not commutative*
 5. $$((C[a,b], K),*)$$ The space of functions continous over the interval $$[a,b] \subset K$$ with the usual function multiplication $$f*g = f(x) \cdot g(x) \, \forall x \in [a,b]$$ is *commutative,* *associative* and *unital*
 
 **Terminology: Finite Dimensional Algebras** 
@@ -92,9 +92,6 @@ Take $$(\mathbb{R} \bigoplus \mathbb{R}, *)$$ equipped with multiplication $$(x_
 2. Norm: $$\gamma_2(z_1) = x_1 y_1$$
 3. Trace: $$\gamma_1(z_1) = x_1 + y_1$$
 
-
-
-
 **Theorem (Cayley-Hamilton):** \\
 Let $$(A,*)$$ be a $$2-$$dimensional algebra, then $$ \forall x,y \in A x*(x*y) = \gamma_{1}(x) (x*y) - \gamma_{2}(x) y$$ \\
 
@@ -124,10 +121,77 @@ Take the left multiplication matrix, $$J_A(x)$$, with characteristic polynomial 
 - $$\rightarrow $$ $$ J_A(x)^2 y = \operatorname{Tr}(J_A(x)) J_A(x) y - \det(J_A(x)) y = \gamma_{1}(x)(x*y) -  \gamma_{2}(x) y$$
 - Note $$J_A(x) \cdot y := x * y$$ $$\rightarrow$$ $$x*(x*y) = x*(J_A(x)y) = J_A(x) J_A(x) y = J_A(x)^2 y$$ 
 
+**Definition (Idempotence, Nilpotence)** \\
+Let $$(A,*)$$ be a $$K$$-algebra
+1. $$a \in A, \, a \neq 0$$ is called idempotent if $$a^2 = a$$
+2. $$b \in A, \, b \neq 0$$ is called 2-nilpotent if $$b^2 = 0$$
 
+***Example (Idempotent)*** \\
+Any unital algebra $$(A,*)$$ has the obvious idempotent: the unital element $$\exists e \in A$$ with $$\forall a \in A a*e=e*a=a$$ and in particular $$e^2 = e*e = e$$
 
+***Example (2-Nilpotent)*** \\
+Consider the group of $$n \times n$$ matrices $$(M(n, \mathbb{R}), \cdot)$$. Take $$a = \begin{pmatrix}0 & 1\\\ 0 & 0\end{pmatrix}$$ and check that $$a^2 = 0$$.
 
+**Theorem** \\
+Let $$(A,*)$$ be any $$K$$-algebra. If $$A$$ does not admit 2-nilpotents then $$A$$ must admit at least one idempotent.
 
+***Proof*** \\
+Consider the map $$\phi :A \rightarrow A$$ given by $$\phi(u) = u-u^2$$ and assume by contradiction that $$A$$ admits no 2-nilpotents, i.e. $$ \forall u \in A \backslash 0, u^2 \neq 0$$
 
+(i) We note that $$\phi_0:= u$$ is a principal part of $$\phi$$ near the origin with $$\operatorname{Ind}(0, \phi_0) = 1$$
 
+(ii) On the other hand, $$\phi_{\infty}:= u^2$$ is a principal part of $$\phi$$ for some sufficiently large ball $$B_R(0)$$ where, by assumption as $$A$$ does not admit 2-nilpotents, $$\phi_{\infty}$$ is admissible and about which $$deg(\phi_{\infty}, B_R(0)) = deg$$ \\
+*remark:* if $$A$$ were such that it admitted at least one 2-nilpotent, $$\hat{u} \in A$$, then it follows that $$ (\alpha u)^2 = 0$$ for all $$ \alpha \in K$$. And so, a algebraic $$2-nilpotent$$ corresponds to a ray solution of the equation $$u^2 = 0$$ such that any ball about the origin would not be an admissible domain for $$\phi_{\infty}$$
 
+(iii) Recall, that a field is homotopically admissible to all of its principal parts, in particular, it must be the case that $$ind(0,\phi_0 ) = ind(0,\phi_{\infty})$$. However, $$ind(0,\phi_0 ) = 1$$ and $$ind(0,\phi_{\infty})$$ is even. 
+
+And so there does not exist an admissible homotopy between $$\phi_0$$ and $$\phi_{\infty}$$ hence there exists $$u^' \in A$$ with $$\phi(u^') =0$$ 
+<hr width="50%">
+
+**Definition (3 -Nilpotence)** \\
+Let algebra $$(A,*)$$ be associative -or- commutative -or- both. Then $$a \in A$$ is called 3-nilpotent if $$a^2 \neq 0$$ but $$a^3 = 0$$
+
+***Example (3-Nilpotent)*** \\
+Take $$(M(3, \mathbb{R}), \cdot)$$ and $$a =  \begin{pmatrix}0 & 1 & 0\\\ 0 & 0 & 1\\\ 0 & 0 & 0\end{pmatrix}$$
+
+**Definition (Zero-divisors)** \\
+If $$(A,*)$$ is a K-algebra, then $$x \in A, x \neq 0$$ is called a zero-divisor if $$\exist y \in A, y \neq 0$$ such that $$x*y=0$$
+
+***Remark*** \\
+Any 2-nilpotent element, $$x$$, is a zero-divisor of itself.
+
+In order to embark on the perilous, crucial passage from algebra theory to their application in the study of dynamical systems we will have to discuss special classes of algebra. The first of which is the *division algebra*
+**Definition (Division-algebra)** \\
+$$(A,*)$$ is called a division algebra if it does not admit zero-divisors.
+
+***Examples (Division-algebras)*** \\
+1. $$\mathbb{C}$$ is a division algebra
+2. $$\bar{\mathbb{C}$$ is a division algebra
+3. $$\mathbb{R} \bigoplus \mathbb{R}$$ is not a division algebra, take for instance $$(1,0)*(0,1) = (0,0)$$
+
+The next special classes of algebra are so-called regular and singular algebras.
+**Definition (Regular-algebra)** \\
+$$(A,*)$$ is called a regular algebra if $$\exists x \in A$$ such that $$J_A(x)$$ is invertible.
+
+**Definition (Singular-algebra)** \\
+On the other hand, we call an algebra $$(A,*)$$ singular if $$\forall x \in A$$ the matrix $$J_A(x)$$ is singular.
+
+***Remark*** \\
+We will see that the norm is an important tool for regular algebras and not so for singular algebras.
+
+**Theorem (Classification of Commutative 2-dimensional Algebras)** \\
+All 2-dimensional commutative algebras are completely described, up to isomorphism, by the following table.
+
+$$
+\begin{tabular}{||l|c|r|p{6cm}||}
+    \cline{1-3}
+    Left & Center & Right & Paragraph \\
+    \hline \hline
+    1 & 1 & 1 & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\
+    \hline
+    12 & 12 & 12 & Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. \\
+    \hline
+    123 & 123 & 123 & Curabitur dictum gravidamauris. \\ [.3cm]
+    \cline{4-4}
+\end{tabular}
+$$

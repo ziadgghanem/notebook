@@ -74,6 +74,22 @@ $$f \circ g \sim$$ $$\mathbb{1}_{Y}.$$
 
 ### Excercises
 
+*Example 0.1:* A 1-dimensional cell complex $$X = X^1$$ is called a graph, where $$X^0$$ is the set of vertices and $$X^1$$ is constructed by attaching the two eges (the boundary) of each 1-cells to a vertex.
+
+<hr width="50%">
+
+*Example 0.2 (the circle):* $$X:= S^1$$ can be constructed with two 0-cells, $$e_{1}^{(0)}, e_{2}^{(0)},$$ and two 1-cells $$e_{1}^{(1)}, e_{2}^{(2)}.$$
+
+<hr width="50%">
+
+*Example 0.3 (the 2-disk):* $$X:= D^2$$ can be constructed with one 0-cell $$e^{(0)},$$ one 1-cell $$e^{(1)},$$ and one 2-cell $$e^{(2)}.$$
+1. Our 1-skeleton is formed by attaching each end of $$e^{(1)}$$ to the vertex $$e^{(0)}$$ such that $$X^1 \simeq S^1$$.
+2. Note that $$\partial e^{(2)} \simeq S^1.$$ X is completed by attaching the boundary of $$e^{(2)}$$ to $$X^1$$
+
+<hr width="50%">
+
+*Example 0.3 (the n-sphere):* $$X:= S^n$$ for $$n \in \mathbb{N}$$ has a C.W. structure with just $$e^{(0)$$ and $$e^{(n)$$ by attaching the boundary of our n-cell with the constant map $$S^{n-1} \rightarrow e^{(0).$$ this is equivalent to understanding $$S^n$$ as the quotient space $$D^n / \partial D^n$$
+
 
 ### Fundamental Group \\
 Let $$X$$ be a topological space, A path in $$X$$ is a continous map $$\alpha: I \rightarrow X.$$
