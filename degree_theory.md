@@ -166,7 +166,7 @@ $$(A,*)$$ is called a division algebra if it does not admit zero-divisors.
 
 ***Examples (Division-algebras)*** \\
 1. $$\mathbb{C}$$ is a division algebra
-2. $$\bar{\mathbb{C}$$ is a division algebra
+2. $$\bar{\mathbb{C}}$$ is a division algebra
 3. $$\mathbb{R} \bigoplus \mathbb{R}$$ is not a division algebra, take for instance $$(1,0)*(0,1) = (0,0)$$
 
 The next special classes of algebra are so-called regular and singular algebras.
@@ -179,19 +179,12 @@ On the other hand, we call an algebra $$(A,*)$$ singular if $$\forall x \in A$$ 
 ***Remark*** \\
 We will see that the norm is an important tool for regular algebras and not so for singular algebras.
 
-**Theorem (Classification of Commutative 2-dimensional Algebras)** \\
-All 2-dimensional commutative algebras are completely described, up to isomorphism, by the following table.
+**Proposition** \\
+Suppose $$(A,*)$ is singular, then every element $$x\in A$$ is a zero-divisor.
 
-$$
-\begin{tabular}{||l|c|r|p{6cm}||}
-    \cline{1-3}
-    Left & Center & Right & Paragraph \\
-    \hline \hline
-    1 & 1 & 1 & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\
-    \hline
-    12 & 12 & 12 & Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. \\
-    \hline
-    123 & 123 & 123 & Curabitur dictum gravidamauris. \\ [.3cm]
-    \cline{4-4}
-\end{tabular}
-$$
+***Proof*** \\
+Take $$(A,*)$$ singular, and  $$x \in A$$ then $$J_A(x)$$ is, in particular, singular. As a singular matrix, $$J_A(x)$$, has a nontrivial kernel in $$A$$ i.e. $$\exists y \neq 0 \in A$$ with $$J_A(x)y = x * y = 0$$ hence, $$x$$ is a zero divisor.
+
+**Theorem (Classification of Commutative 2-dimensional Algebras)** \\
+All 2-dimensional commutative algebras are completely described, up to isomorphism, with six classes. They are distinguished by 2 invariants: number of idempotents, number of 2-nilpotents
+
