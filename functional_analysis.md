@@ -129,6 +129,10 @@ Suppose $$T$$ is continuous at $$0$$ i.e. $$\forall_{x\in V} \forall_{\epsilon >
 
 
 **Terminology**\\
-Let $$T:V \rightarrow W$$ be a linear operator. If $$T$$ is, in addition, continuous, we call $$T$$ a bounded operator, and $$ \Vert T \Vert$$ the operator norm of $$T$$. Finally, we define the set 
+Let $$T:V \rightarrow W$$ be a linear operator. If $$T$$ is, in addition, continuous, we call $$T$$ a bounded operator, and $$ \Vert T \Vert$$ the operator norm of $$T$$. Finally, we define the set of all bounded operators from $$V \rightarrow W$$
 
 $$L(V,W):= \{ T: V \rightarrow W \vert  \begin{matrix} (1) \mbox{T is linear}  \\ (2) \mbox{T is bounded} \end{matrix}   \} $$
+
+***Claim:*** $$L(V,W)$$ iss a vector space with norm $$ \Vert \cdot \Vert : L(V,W) \rightarrow \mathbb{R}$$ \\
+(n1) $$ \Vert T \Vert \ge 0$$ $$\forall T \in L(V,W)$$ and $$ \Vert T \Vert = 0 \iff T = 0$$ \\
+(n2) $$\Vert rT \Vert = \sup_{\Vert x \Vert \le 1} \Vert r T(x) \Vert = \vert r \vert sup_{$$

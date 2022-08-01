@@ -36,7 +36,7 @@ Definitionss: Let $$V$$ be a vector space over a field $$K$$ (either $$\mathbb{R
 2. (Left Distributivity) $$c * (\alpha a + \beta b) = \alpha(c*a) + \beta(c*b)$$
 Then we say that $$V$$ is an algebra over the field $$K$$ or we may call $$V$$ a $$K$$-algebra and write $$(V, *)$$. 
 
-An Algebra is a vectorr space with an additional operator that is bilinear.
+An Algebra is a vector space with an additional operator that is bilinear.
 
 We will consider three classes of algebras, $$(A, *)$$ is called:
 1. Commutative if $$a*b = b*a \quad \forall a,b \in A$$
@@ -188,3 +188,25 @@ Take $$(A,*)$$ singular, and  $$x \in A$$ then $$J_A(x)$$ is, in particular, sin
 **Theorem (Classification of Commutative 2-dimensional Algebras)** \\
 All 2-dimensional commutative algebras are completely described, up to isomorphism, with six classes. They are distinguished by 2 invariants: number of idempotents, number of 2-nilpotents
 
+**Definition (Rank 3-algebra)** \\
+A real commutative algebra $$(A,*)$$ is called rank-3 if $$x^3 = \gamma_1(x) x^2 - \gamma_2(x) x$$
+
+***Remark*** \\
+Recall that, in linear algebra, the rank of a matrix is the dimension of the vector space spanned by its columns.
+
+**Theorem (First Main Theorem)** \\
+Let $$(A,*)$$ be a real commutative 2-dimensional rank-3 algebra, then:
+1. Regular algebra A is a division algebra iff the norm is uniformly positive definite or uniformly negative definite i.e. iff $$\gamma_2(x) > 0 \forall x \neq 0 \in A$$ or  $$\gamma_2(x) < 0 \forall x \neq 0 \in A$$
+2. Regular algebra A, admits a basis of zero-divisors iff the norm is indefinite i.e. iff $$\exists x,y \neq 0$$ such that $$\gamma_2(x) > 0$$ and $$\gamma_2(y) < 0$$
+3. A admits a 2-nilpotent elelment iff the norm is uniformly positive semi-definite or uniformly negative semi-definite i.e. iff $$ \gamma_2(x) \geq 0 \forall x \in A$$ and $$\exists y \neq 0$$ with $$ \gamma_2(y) = 0$$ or $\gamma_2(x) \leq 0 \forall x \in A$$ and $$\exists y \neq 0$$ with $$ \gamma_2(y) = 0$$
+4. A is singular iff the norm is identically zero i.e. iff $$\gamma_2(x) \equiv 0$$
+
+***Proof (Coordinate Based)*** \\
+$$(1)$$ *A is a division algebra $$\iff$$ $$\gamma_2(x)$$ is positive or negative definite.*
+
+We will need the following lemma: \\
+*Lemma A:* Let $$e_1, e_2$$ be a basis in $$A$$ inducing the following multiplication table $$\begin{pmatrix}a_1 & a_2 & a_3\\\ b_1 & b_2 & b_3\end{pmatrix}$$ such that 
+
+$$ 
+
+$$
