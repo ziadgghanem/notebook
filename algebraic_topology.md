@@ -90,6 +90,9 @@ $$f \circ g \sim$$ $$\mathbb{1}_{Y}.$$
 
 *Example 0.3 (the n-sphere):* $$X:= S^n$$ for $$n \in \mathbb{N}$$ has a C.W. structure with just $$e^{(0)$$ and $$e^{(n)$$ by attaching the boundary of our n-cell with the constant map $$S^{n-1} \rightarrow e^{(0).$$ this is equivalent to understanding $$S^n$$ as the quotient space $$D^n / \partial D^n$$
 
+<hr width="50%">
+
+*Example 0.4 (the torus):* $$X:= T^2$$ has the following C.W. components $$\mathcal{E} = {e^{(0), e_1^{(1), e_1^{(2), e^{(2)}$$
 
 ### Fundamental Group \\
 Let $$X$$ be a topological space, A path in $$X$$ is a continous map $$\alpha: I \rightarrow X.$$
