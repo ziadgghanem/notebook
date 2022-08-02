@@ -17,7 +17,7 @@ The theory of the Brouwer Degree is concerned with algebraically counting the so
 
 \$$
 \begin{eqnarray}
-f(x) &= 0, \; x \in \Omega \end{equation} \tag{1} \label{1}
+f(x) &= 0, \; x \in \Omega
 \end{eqnarray}
 \$$
 {: style="text-align: center"}
@@ -71,8 +71,8 @@ deg(f, \emptyset) & = deg(f, \emptyset) + deg(f, \emptyset) \\
  & \rightarrow deg(f, \emptyset) = 0 \; \square
 \end{align}
 
-</details>
 </div>
+</details>
 
 </div>
 
@@ -102,8 +102,8 @@ deg(f, \Omega) & = deg(f, \Omega_1) + deg(f, \Omega_2) \\
  & = deg(f, \emptyset) + deg(f, \emptyset) = 0 \; \square
 \end{align}
 
-</details>
 </div>
+</details>
 
 </div>
 
@@ -126,8 +126,8 @@ deg(f, \Omega) & = deg(f, \Omega_1) + deg(f, \emptyset) \\
  & = deg(f, \Omega_1) \; \square
 \end{align}
 
-</details>
 </div>
+</details>
 
 </div>
 
@@ -144,10 +144,11 @@ Let $(f, \Omega) \in \mathcal{M}(\RR^n)$, and suppose $g: \RR^n \rightarrow \RR^
 then, 
 > $deg(f, \Omega) = deg(g, \Omega)$
 
-<div class="proof" markdown="1">
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
 
 Recall, two maps connected by an $\Omega$-admissible homotopy share the same degree over $\Omega$.
 
@@ -163,8 +164,8 @@ Indeed, take $t \in [0,1]$ and $x \in \partial \Omega$ then
  & \geq \inf_{x \in \partial \Omega} \vert f(x) \vert - \sup_{x \in \partial \Omega} \vert g(x) - f(x) \vert > 0 \; \square
 \end{align}
 
-</details>
 </div>
+</details>
 
 </div>
 
@@ -176,15 +177,16 @@ Let $(f, \Omega) \in \mathcal{M}(\RR^n)$ and suppose $g: \RR^n \rightarrow \RR^n
 $\forall_{x \in \partial \Omega} \; f(x) = g(x)$ then $(g,\Omega)\in \mathcal{M}(\RR^n)$ and
 > $deg(f, \Omega) = deg(g, \Omega)$
 
-<div class="proof" markdown="1">
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
 
+<div class="proof" markdown="1">
+
 This is an immediate consequence of the Rouche property.
 
-</details>
 </div>
+</details>
 
 </div>
 
@@ -204,14 +206,15 @@ GL^{-}(n, \RR) &= \lbrace A \in GL(n, \RR) \; : \; det(A)<0 \rbrace
 
 $GL^{\pm}(n, \RR)$ are each open and connected in $L(n, \RR)$, the space of linear maps $\RR^n \rightarrow \RR^n$.
 
-<div class="proof" markdown="1">
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
 
+<div class="proof" markdown="1">
+
 ...
 
-</details>
 </div>
+</details>
 
 </div>
