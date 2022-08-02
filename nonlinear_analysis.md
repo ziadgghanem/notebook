@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Brouwer Degree'
+title: 'The Brouwer Degree'
 ---
 
 <div class="definition" markdown="1">
@@ -24,7 +24,16 @@ for admissible pairs $(f,\Omega)$.
 
 
 For a Euclidean space $\RR^n$ we denote by $\mathcal{M}(\RR^n)$ the set of all admissible pairs $(f, \Omega)$ in $\RR^n$ and, taking a union over all Euclidean spaces, we put 
-> $\mathcal{M} := \bigcup_n \mathcal{M}(\RR^n)$ {: style="text-align: center"}
+
+\begin{eqnarray}
+\mathcal{M} := \bigcup_n \mathcal{M}(\RR^n)
+\end{eqnarray}
+{: style="text-align: center"}
+
+\begin{eqnarray}
+\begin{cases} 0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega \end{cases}
+\end{eqnarray}
+{: style="text-align: center"}
 
 <div class="definition" markdown="1">
 
@@ -41,7 +50,8 @@ satisfying the following three conditions
     - $deg(Id - a, \Omega) = \begin{cases} 0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega \end{cases}$
 </div>
 
-**Remark:** A homotopy, $h: [0,1] \times \RR^n \rightarrow \RR^n$, is said to be $\Omega$ admissible if $\forall_{x \in \partial \Omega,} \forall_{t \in [0,1]} h_t(x) \neq 0$, i.e. $h$ is an $\Omega$-admissible homotopy if $\forall_{t \in [0,1]} (h_t, \Omega) \in \mathcal{M}(\RR^n)$.
+**Remark:** A homotopy, $h: [0,1] \times \RR^n \rightarrow \RR^n$, is said to be $\Omega$-admissible if $\forall_{x \in \partial \Omega,} \forall_{t \in [0,1]} h_t(x) \neq 0$. <br/> 
+i.e. $h$ is an $\Omega$-admissible homotopy if $\forall_{t \in [0,1]} (h_t, \Omega) \in \mathcal{M}(\RR^n)$.
 
 ### Additional Properties of the Degree
 
