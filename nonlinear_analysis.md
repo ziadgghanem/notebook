@@ -15,11 +15,9 @@ Equivalently, such an $f$ will be called $\Omega$-admissible
 
 The theory of the Brouwer Degree is concerned with algebraically counting the solutions of the equation
 
-\$$
 \begin{eqnarray}
 f(x) &= 0, \; x \in \Omega
 \end{eqnarray}
-\$$
 {: style="text-align: center"}
 
 for admissible pairs $(f,\Omega)$. 
@@ -114,10 +112,11 @@ deg(f, \Omega) & = deg(f, \Omega_1) + deg(f, \Omega_2) \\
 For $(f, \Omega) \in \mathcal{M}(\RR^n)$, if $(f^{(-1)}(0) \cap \Omega) \subset \Omega_1$, for $\Omega_1 \subset \Omega$ open then
 > $deg(f, \Omega) = \deg(f, \Omega_1)$
 
-<div class="proof" markdown="1">
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
 
 Again, using additivity of the degree with $\Omega_2 = \empty$
 
