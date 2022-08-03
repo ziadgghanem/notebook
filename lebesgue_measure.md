@@ -229,7 +229,7 @@ A measure must satisfy the properties of a measure, lets check that $\mu$ is $\s
 
 **Proposition**
 
-The measure of an elementary set is $\sigma$-additive i.e.
+The measure of an elementary set is $\sigma$-semi-additive i.e.
 
 Suppose $A, \lbrace A_n \rbrace_{n=1}^{\infty} \subset E$ are elementary sets with $A \subset \bigcup_{n=1}^{\infty} A_n$ then,
 - $\mu(A) \leq \sum^{\infty}_{n=1} \mu(A_n)$
@@ -311,7 +311,7 @@ It has been demonstrated that the measure on elementary sets is semi-$\sigma$-ad
 **Proposition:** 
 
 The measure of elementary sets is $\sigma$-additive, i.e. if $A$ is an elementary set with $A = \bigcup_{n=1}^{\infty} A_n$ where $\lbrace A_n \rbrace_{n=1}^{\infty}$ is a disjoint family of elementary sets,then
-- $\mu(A) = \sum^{\infty}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) = \sum^{\infty}_{n=1} \mu(A_{n})$ 
 
 </div>
 
@@ -324,19 +324,19 @@ The measure of elementary sets is $\sigma$-additive, i.e. if $A$ is an elementar
 We will show two inequalities, 
 
 $(\leq) \quad$ in which we show that 
-- $\mu(A) \leq \sum^{\infty}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) \leq \sum^{\infty}_{n=1} \mu(A_{n})$ 
 
 Indeed, as $A = \bigcup_{n=1}^{\infty} A_n$, in particular $A \subset \bigcup_{n=1}^{\infty} A_n$, and so by $\sigma$-semi-additivity we have
-- $\mu(A) \leq \sum^{\infty}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) \leq \sum^{\infty}_{n=1} \mu(A_{n})$ 
 
 $(\geq) \quad$ in which we show that 
-- $\mu(A) \geq \sum^{\infty}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) \geq \sum^{\infty}_{n=1} \mu(A_{n})$ 
 
 Again we start from the assumption that $A = \bigcup_{n=1}^{\infty} A_n$, if we truncate this union at some finite number $N \in \mathbb{N}$ it must be the case that $\bigcup_{n=1}^{N} A_n \subset A$ such that
-- $\mu(A) \geq \sum^{N}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) \geq \sum^{N}_{n=1} \mu(A_{n})$ 
 
 Now, as $\lim_{N \rightarrow \infty}{\sum^{N}_{n=1}{\mu(A_{n})}} = \sum^{\infty}_{n=1}{\mu(A_{n})}$ we simply take the limit as $N \rightarrow \infty$ of both sides of this inequality to obtain the desired result
-- $\mu(A) \geq \sum^{\infty}_{n=1}{\mu(A_{n})}$ 
+- $\mu(A) \geq \sum^{\infty}_{n=1} \mu(A_{n})$ 
 
 </div>
 </details>
@@ -373,11 +373,6 @@ The outer measure of $A$ is here defined
 
 <div class="proof" markdown="1">
 
-*Proof:*
-
-</div>
-</details>
-
 
 <div class="proposition" markdown="1">
 
@@ -400,6 +395,7 @@ And as the outer-measure of $A$ is an infimum over the set of infinite rectangul
 Since, this holds $\forall_{\epsilon>0}$ we have our result
 - $\mu^{\star}(A) \leq \sum_{n=1}^{\infty}{\mu^{\star}(A_n)}$ 
 </div>
+</details>
 
 <div class="definition" markdown="1">
 
@@ -678,7 +674,7 @@ Assume $\lbrace A_n \rbrace_{n=1}^{\infty}$ is a countable collection of measura
 - $A_1 \supset	A_2 \supset \cdots \supset A_n \supset \cdots$ 
 
 Then,
-- $\mu(\bigcap_{n=1}^{\infty}{A_n} = \lim_{n \rightarrow \infty}{\mu(A_n)}$ 
+- $\mu(\bigcap_{n=1}^{\infty}{A_n}) = \lim_{n \rightarrow \infty}{\mu(A_n)}$ 
 
 </div>
 
@@ -697,15 +693,14 @@ $\cdots$
 
 <div class="proposition" markdown="1">
 
-**Theorem** (Corollary to Continuity of the Lebesgue Measure)
+**Theorem** (Continuity of the Lebesgue Measure v.2)
 
 Assume $\lbrace A_n \rbrace_{n=1}^{\infty}$ is a countable collection of measurable subsets of $E$ and
 - $A_1 \subset	A_2 \subset \cdots \subset A_n \subset \cdots$ 
 
 Then,
-- $\mu(\bigcup_{n=1}^{\infty}{A_n} = \lim_{n \rightarrow \infty}{\mu(A_n)}$ 
+- $\mu(\bigcup_{n=1}^{\infty}{A_n}) = \lim_{n \rightarrow \infty}{\mu(A_n)}$ 
 
-Which follows directly from De Morgan's laws.
 </div>
 
 <div class="proposition" markdown="1">

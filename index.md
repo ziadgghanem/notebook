@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Contents
+title: Notebook
 ---
 
-These are my notes. 
-[Github repository](https://github.com/ziadgghanem/ziadgghanem).
+This is my notebook and these are my notes. 
 
 ## Course Notes
 
-- [Degree Theorey]
+- Degree Theory
     - [Planar Degree Theory](degree_theory.md): Course notes.
     - [Nonlinear Analysis](nonlinear_analysis.md): Course notes.
 
-- [Real Analysis]
+- Real Analysis
     - [Real Numbers](real_numbers.md)
     - [Lebesgue Measure](lebesgue_measure.md)
     - [General Measure Theory](general_measure.md)
-    - [Measurable Functions](measurable_functions.md)
     - [Lebesgue Integration](lebesgue_integration.md)
+    - [Lebesgue Spaces](lebesgue_spaces.md)
 
 - [Functional Analysis](functional_analysis.md): Course notes.
 
