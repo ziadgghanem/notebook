@@ -9,7 +9,7 @@ title: 'Real Numbers'
 In simple terms, a binary relation between two sets is a rule of association between elements of each set. 
 
 Consider the *cartesian product* of sets $A$ and $B$
-> $A \times B = \lbrace (a,b): \quad a \in A, \; b \in B \rbrace$
+- $A \times B = \lbrace (a,b): \quad a \in A, \; b \in B \rbrace$
 
 We will see that the cartesian product of sets is the most general binary relation between them as each element in $A$ is 
 associated with every element in $B$.
@@ -31,15 +31,15 @@ In general a binary relation between sets $A$ and $B$ defines a map from $A$ to 
 
 Some instructive examples of binary relations:
 1. Let $A$ be the set of all straight lines in the plane, we define $\sigma \subset A \times A$ such that 
-    > $a \; \sigma \; b$ $\iff a \parallel b$
+    - $a \; \sigma \; b$ $\iff a \parallel b$
 2. Again, let $A$ be the set of all straight lines in the plane
-    > This time we define $\sigma \subset A \times A$ such that $a \; \sigma \; b \iff a \perp b$
+    - This time we define $\sigma \subset A \times A$ such that $a \; \sigma \; b \iff a \perp b$
 3. Let $A_m = \mathbb{Z}$ the set of all integer numbers with $m$ some fixed integer, we define $\sigma \subset A \times A$ such that 
-    > $a \; \sigma \; b \iff a \equiv b \; mod \; m \iff \exists k \in \mathbb{Z}$ such that $a-b = km$
+    - $a \; \sigma \; b \iff a \equiv b \; mod \; m \iff \exists k \in \mathbb{Z}$ such that $a-b = km$
 4. Let $X$ be any set and put $A = 	\mathcal{P}(X)$ the set of all subsets of $X,$ we define $\sigma \subset A \times A$ such that 
-    >  $a \; \sigma \; b \iff a \subset b$ where $a,b \subset X$
+    -  $a \; \sigma \; b \iff a \subset b$ where $a,b \subset X$
 5. Let $A = \mathbb{R}$ and $B = \mathbb{C},$ we define $\sigma \subset A \times B$ such that,
-    >  $t \; \sigma \; z \iff$ $z = e^{it}$
+    -  $t \; \sigma \; z \iff$ $z = e^{it}$
 </div>
 
 *Properties of Binary Relations:*
@@ -211,9 +211,11 @@ Any supremum for a subset of the real numbers, $A \subset \mathbb{R}$, is also a
 > $\forall \epsilon > 0$ $\exists a \in A$ such that $\sup{A} \leq a + \epsilon$
 </div>
 
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
 <div class="proof" markdown="1">
 
-*Proof:*
 
 Let $\sup{A}$ be the supremum of some set $A \subset \mathbb{R}$. Suppose, for contradiction, that $\sup{A}$ is not a limit point of $A$ i.e. suppose
 > $\exists \epsilon > 0$ such that $\forall a \in A$ $\sup{A} > a + \epsilon$
@@ -222,6 +224,8 @@ Then the quantity $\sup{A} - \epsilon$ is an upper bound for $A$ and as $\epsilo
 
 However, $\sup{A}$ was assumed to be the *least* upper bound for $A$, contradiction.
 </div>
+</details>
+
 
 <div class="problem" markdown="1">
 
@@ -278,9 +282,12 @@ Any complete ordered field is Archimedian.
 
 </div>
 
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+
 <div class="proof" markdown="1">
 
-*Proof:*
 
 Let the field, $(\mathbb{F}, <),$ be order complete.
 > $\iff$ any bounded set $A \subset \mathbb{F}$ admits a supremum
@@ -301,6 +308,8 @@ But now we must conclude that $\gamma - a$ is an upper bound for $A$ and $\gamma
 $\gamma$ is the *least upper bound* for $A$ and so the proposition follows.
 
 </div>
+</details>
+
 
 <div class="proposition" markdown="1">
 
@@ -311,9 +320,10 @@ $(\mathbb{R}, <)$ coincides with the natural order on the reals.
 
 </div>
 
-<div class="proof" markdown="1">
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
 
-*Proof:*
+<div class="proof" markdown="1">
 
 Suppose, by contradiction, that such an order exists. 
 
@@ -327,6 +337,8 @@ Case $1:$ Assume that $i < 0$
 Then, $0 < -i$ and by the axioms of ordered fields 
 > $0 \cdot -i < -i \cdot -i $ $\rightarrow$ $0 < -1,$ again a contradiction. 
 </div>
+</details>
+
 
 ### Topology in $\mathbb{R}$
 
@@ -410,15 +422,18 @@ Let $A \subset X$ for some metric space $(M, \rho)$ then $cl(A)$ is the minimal 
 
 </div>
 
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
 <div class="proof" markdown="1">
 
-*Proof:* 
 
 That $cl(A)$ is closed follows from the face that closure is an idempotent operation, i.e. that $cl(cl(A)) = cl(A)$. We will show that any other closed set containing $A$ must also contain $cl(A)$.
 
 Recall that the closure of $A$ is defined to be the union of $A$ the limit points of $A$. Let $B \subset X$ be a closed set with $A \subset B$. As $B$ is closed, it contains all of its limit points. Let $\lbrace a_n \rbrace \subset A$ be a sequence with $a_n \rightarrow a$. As $\lbrace a_n \rbrace$ also belongs to $B$ and $B$ is closed it must be that $a \in B$. Hence, as $B$ contains both $A$ and all of its limit points $B$ must also contain the closure of $A$.
 
 </div>
+</details>
 
 <div class="problem" markdown="1">
 
@@ -487,9 +502,12 @@ become arbitarily close together, i.e.
 Any convergent sequence in a metric space is a Cauchy sequence.
 </div>
 
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
 <div class="proof" markdown="1">
 
-*Proof:* 
 
 Given metric space $(M, \rho),$ suppose $\lbrace x_n \rbrace \subset M$ is convergent to $a \in M$
 > $\rightarrow$ $\lim_{n \rightarrow \infty } \rho(x_n, a) = 0$
@@ -500,6 +518,8 @@ Now consider the distance between the $n$-th and $m$-th terms of our sequence. B
 Where, both terms on the RHS of the inequality vanish in the limit such that
 > $\lim_{n \rightarrow \infty } \rho(x_n, x_m) = 0$
 </div>
+</details>
+
 
 <div class="example" markdown="1">
 
@@ -639,9 +659,11 @@ If a map between metric spaces $f: M_1 \rightarrow M_2$ is continuous and $K \su
 $f(K)$ is compact in $M_2$
 </div>
 
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
 <div class="proof" markdown="1">
 
-*Proof:*
 
 Take any sequence belonging to the image of $K,$ $\lbrace y_n \rbrace \subset f(K)$ and find the corresponding sequence $\lbrace x_n \rbrace \subset$ such that 
 $f(x_n) = y_n$ $\forall n.$
@@ -654,6 +676,8 @@ So, any sequence $\lbrace y_n \rbrace \subset K$ has a convergent subsequence $\
 
 Hence, $f(K)$ is sequentially compact $\iff$ $f(K)$ is compact.
 </div>
+</details>
+
 
 A very useful corrolary to this proposition is the *Weierstrass Theorem* (also known as the extreme value theorem) which 
 states that a continuous function on a compact set obtains its extreme values. We recall that for real functions the extreme
@@ -667,9 +691,10 @@ Let $K$ be a compact subset of some metric space $M$ and $f:M \rightarrow \mathb
 and minimum on $f(K)$.
 </div>
 
-<div class="proof" markdown="1">
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
 
-**Proof:**
+<div class="proof" markdown="1">
 
 Let $K \subset M$ be a compact, then by the previous result, for any continuous map $f:M \rightarrow \mathbb{R}$ we
 have that $f(K) \subset \mathbb{R}$ is compact.
@@ -680,6 +705,8 @@ As a bounded subset of the order-complete field $\mathbb{R},$ $f(K)$ must admit 
 
 As a closed set, $f(K)$ contains all of its limit points and in particular $\inf f(K), \sup f(K) \in f(K).$
 </div>
+</details>
+
 
 Isometries are distance preserving bijections between metric spaces.
 
@@ -718,9 +745,11 @@ Given a metric space $(M, \rho),$
     - There exists an isometry $f: M_1 \rightarrow M_2$ such that $f \vert_M = \mathbb{1}$
 </div>
 
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
 <div class="proof" markdown="1">
 
-*Proof:*
 
 **Step 1:** Define Equivalence Relation
 
@@ -787,5 +816,7 @@ $\bar{x}$
 $\ldots$
 
 </div>
+</details>
+
 
 ### Cantor's Construction of Real Numbers
