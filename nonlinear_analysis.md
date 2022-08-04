@@ -30,9 +30,9 @@ For a Euclidean space $\RR^n$ we denote by $\mathcal{M}(\RR^n)$ the set of all a
 \end{eqnarray}
 {: style="text-align: center"}
 
-\begin{eqnarray}
-\begin{cases} 0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega \end{cases}
-\end{eqnarray}
+\begin{cases} 
+0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega 
+\end{cases}
 {: style="text-align: center"}
 
 <div class="definition" markdown="1">
@@ -47,7 +47,7 @@ satisfying the following three conditions
 2. (Homotopy): Given an $\Omega$-admissible homotopy, $h: [0,1] \times \RR^n \rightarrow \RR^n$, 
     - $deg(h_t, \Omega)$ is constant with respect to $t \in [0,1]$
 3. (Normalization): Let $\Omega \subset \RR^n$ be open, bounded with $a \in \RR^n$, $a \notin \partial \Omega$ then
-    - $deg(Id - a, \Omega) = \begin{cases} 0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega \end{cases}$
+    - $$deg(Id - a, \Omega) = \begin{cases} 0 & \text{if } a \notin \Omega \\ 1 & \text{if } a \in \Omega \end{cases}$$
 </div>
 
 **Remark:** A homotopy, $h: [0,1] \times \RR^n \rightarrow \RR^n$, is said to be $\Omega$-admissible if $\forall_{x \in \partial \Omega,} \forall_{t \in [0,1]} h_t(x) \neq 0$. <br/> 
@@ -211,7 +211,7 @@ GL^{-}(n, \RR) &= \lbrace A \in GL(n, \RR) \; : \; det(A)<0 \rbrace
 
 <div class="proposition" markdown="1">
 
-**Proposition:** Lemma 
+**Lemma:**  
 
 $GL^{\pm}(n, \RR)$ are each open and connected in $L(n, \RR)$, the space of linear maps $\RR^n \rightarrow \RR^n$.
 
@@ -226,4 +226,103 @@ $GL^{\pm}(n, \RR)$ are each open and connected in $L(n, \RR)$, the space of line
 </div>
 </details>
 
+</div>
+
+<div class="proposition" markdown="1">
+
+**Propostion:** Degree of Linear Isomorphism
+
+For $A \in GL^{+}(n, \RR)$ and $\Omega \subset \RR^n$ open, bounded 
+
+\begin{equation*}
+deg(A,\Omega) = \begin{cases}
+1 &\text{if } 0 \in \Omega\\
+0 &\text{if } 0 \notin \Omega
+\end{cases}
+\end{equation*}
+
+For $A \in GL^{-}(n, \RR)$ and $\Omega \subset \RR^n$ open, bounded 
+
+\begin{equation*}
+deg(A,\Omega) = \begin{cases}
+-1 &\text{if } 0 \in \Omega\\
+0 &\text{if } 0 \notin \Omega
+\end{cases}
+\end{equation*}
+
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+...
+
+</div>
+</details>
+
+</div>
+
+## Some Fundamental Facts from Analysis
+
+<div class="proposition" markdown="1">
+
+**Theorem:**  Weierstrass
+
+Let $K \subset \RR^n$ be a compact set and $f : \RR^n \rightarrow \RR^n$ a continuous map, then
+- $\forall_{\epsilon>0} \exists_{f_0 : \RR^n \rightarrow \RR^n}$ such that $f_0 \in C^{\infty}$ and $\sup_{x \in K} \vert f(x) - f_0(x) \vert < \epsilon$
+</div>
+
+<div class="definition" markdown="1">
+
+**Definition:**  Support
+
+The support of a function $f : \RR^n \rightarrow \RR$ is defined
+- $supp f := \lbrace x \in \RR^n \; : \; f(x) \neq 0 \rbrace$
+</div>
+
+<div class="proposition" markdown="1">
+
+**Theorem:**  Tietze-Dugunji Extension
+
+Let $(X,d)$ be a metric space, $A \subset X$ a closed subset, $\EE$ a normed space and $f: A \rightarrow \EE$ a continuous map. Then there exists a continuous map $\tilde{f}: X \rightarrow \EE$ such that 
+1. $f(x) = \tilde{f}$ for all $x \in A$
+2. $\tilde(f)(X) \subset \overline{conv(f(A))}$
+</div>
+
+**Remark:** The notion of an admissible pair $(f, \Omega)$ can be extended to include maps $f: \overline{\Omega} \rightarrow \RR^n$ with $\forall_{x \in \partial \Omega} f(x) \neq 0$. Furthermore, if $\tilde{f}$ is a continuous extension of $f$ then
+- $deg(f, \Omega) = deg(\tilde{f}, \Omega)$
+
+<div class="definition" markdown="1">
+
+**Definition:**  Regular/Critical points and values
+
+Let $f : \RR^n \rightarrow \RR^n$ be a $C^{\infty}$ map, and $K \subset \RR^n$ a compact set
+- We say that $x_0 \in \RR^n$ is a regular point of $f$ if and only if $Df(x_0): \RR^n \rightarrow \RR^n$ is an isomorphism. 
+    - Otherwise, $x_0$ is said to be critical.
+- We say that $y_0 \in \RR^n$ is a critical value of $f_{\vert_K}$ if there exists a critical point $x_0 \in K$ such that $f(x_0) = y_0$
+    - Otherwise, $y_0$ is said to be regular.
+</div>
+
+<div class="proposition" markdown="1">
+
+**Theorem:**  Inverse Function Theorem
+
+For $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map, if $x_0 \in \RR^n$ is a regular value of $f$, then $f$ is injective in a neighborhood of $f$
+
+
+**Theorem:**  Lemma
+
+For $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map, $x_0 \in \RR^n$ is a regular point of $f$ if and only if $Df(x_0) : \RR^n \rightarrow \RR^m$ is surjective, otherwise it is called critical. 
+</div>
+
+<div class="proposition" markdown="1">
+
+**Theorem:**  Sard's Lemma
+
+Let $K \subset \RR^n$ be a compact set, and $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map. Then, the set of all regular values of $f_{\vert_K}$ is open and dense in $\RR^m$
+
+**Theorem:**  Lemma
+
+For $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map, $x_0 \in \RR^n$ is a regular point of $f$ if and only if $Df(x_0) : \RR^n \rightarrow \RR^m$ is surjective, otherwise it is called critical. 
 </div>

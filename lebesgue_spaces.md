@@ -65,7 +65,7 @@ Assume $\Omega$ is a measure space with $\mu(\Omega) = 1$, $f: \Omega \rightarro
 
 <div class="proposition" markdown="1">
 
-**Corollary:** 
+**Corollary 1:** 
 
 Assume $\phi(x) = e^x$ then for $\mu(\Omega) = 1$ and $f: \Omega \rightarrow (a,b)$ Lebesgue integrable Jensen's inequality reads
 - $e^{\int\limits_{\Omega} f d \mu} =  \int\limits_{\Omega} e^{f} d \mu$
@@ -73,9 +73,134 @@ Assume $\phi(x) = e^x$ then for $\mu(\Omega) = 1$ and $f: \Omega \rightarrow (a,
 
 <div class="proposition" markdown="1">
 
-**Corollary:** 
+**Corollary 2:** 
 
-Let $\Omega = \lbrace p_1, \ldots, p_n \rbrace$ with $\mu(p_i) = \frac{1}{n}$ and $f: \Omega \rightarrow (a,b)$ such that $f(p_i) = x_i$ then it follows from Jensen's inequality that
-- $\phi( \int\limits_{\Omega} f d \mu) = \phi(x_1 \frac{1}{n} + \cdots + x_n \frac{1}{n}) = \phi(\frac{1}{n}(x_1 + \cdots + x_n))$
-- $ \leq \int\limits_{\Omega} (\phi \circ f) d \mu = \frac{1}{n} \phi(x_1) + \cdots + \frac{1}{n} \phi(x_n)$
+Let $\Omega = \lbrace p_1, \ldots, p_n \rbrace$ with $\mu(p_i) = \frac{1}{n}$ and $f: \Omega \rightarrow (a,b)$ such that $f(p_i) = x_i$ then
+- $e^{\frac{1}{n}(x_1 + \cdots + x_n)} \leq \frac{1}{n}(e(x_1) + \cdots + e(x_n))$
+
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+It follows from Jensen's inequality that,
+
+\begin{align}
+e( \int\limits_{\Omega} f d \mu) & = e(x_1 \frac{1}{n} + \cdots + x_n \frac{1}{n}) \\
+ & = e(\frac{1}{n}(x_1 + \cdots + x_n)) \\
+ & \leq \int\limits_{\Omega} (e \circ f) d \mu = \frac{1}{n} e(x_1) + \cdots + \frac{1}{n} e(x_n) \; \square
+\end{align}
+ 
 </div>
+</details>
+</div>
+
+
+<div class="proposition" markdown="1">
+
+**Corollary 3:** 
+
+Again, let $\Omega = \lbrace p_1, \ldots, p_n \rbrace$ with $\mu(p_i) = \frac{1}{n}$ and $f: \Omega \rightarrow (a,b)$ such that $f(p_i) = x_i$, and put $y_i : = e^{x_i}$ then 
+- $\sqrt[n]{y_1 \cdots y_n} \leq \frac{y_1 + \cdots + y_n}{n}$
+
+Which is the classical inequality between geometric and arithmetic means.
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+ 
+</div>
+</details>
+</div>
+
+<div class="proposition" markdown="1">
+
+**Corollary 4:** 
+
+Assume $\Omega$ and $f: \Omega \rightarrow (a,b)$ are as in Cor. 2 and 3. Define a measure $\mu$ on $\Omega$ such that $\mu(p_i) = \alpha_i \geq 0$ such that $\sum_{i=1}^n \alpha_i = 1$, then
+- $e^{\alpha_1 x_1 + \cdots + \alpha_n x_n} \leq \alpha_1 e^{x_1} + \cdots + \alpha_n e^{x_n}$
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+ 
+</div>
+</details>
+</div>
+
+<div class="definition" markdown="1">
+
+**Definition:** Conjugacy
+
+Given two real numbers, $p,q > 1$, we say that they are conjugate if $\frac{1}{p} + \frac{1}{q} = 1$ or equivalently if $pq = p+q$
+
+</div>
+
+**Remark:** Some immediate properties of conjugate numbers
+1. For every $p \in [1, \infty]$ there exists a unique $q \in [1, \infty]$ conjugate to $p$. 
+2. $2$ is the only number conjugate to itself.
+3. If $p,q$ are conjugate and $p \rightarrow 1$ then $q \rightarrow \infty$
+
+<div class="proposition" markdown="1">
+
+**Theorem:** Holder's Inequality 
+
+Let $(X, \Sigma_X, \mu)$ be a measaure space and $f,g: \rightarrow [0, \infty]$ two integrable functions. For any two conjugates $p,q$ the following inquality holds
+- $\int\limits_X fg d \mu \leq (\int\limits_X f^p d \mu)^{\frac{1}{p}} (\int\limits_X g^q d \mu)^{\frac{1}{p}}$
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+ 
+</div>
+</details>
+</div>
+
+
+<div class="proposition" markdown="1">
+
+**Theorem:** Minkowski's Inequality 
+
+Let $(X, \Sigma_X, \mu)$ be a measaure space and $f,g: \rightarrow [0, \infty]$ two integrable functions. For any $p > 1$ the following inquality holds
+- $(\int\limits_X (f + g)^p d \mu)^{\frac{1}{p}} \leq (\int\limits_X f^p d \mu)^{\frac{1}{p}} + (\int\limits_X g^p d \mu)^{\frac{1}{p}}$
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+ 
+</div>
+</details>
+</div>
+
+
+<div class="definition" markdown="1">
+
+**Definition:** p-Norm
+
+Given a measure space $(X, \Sigma_X, \mu)$ and a measurable function $f: X \rightarrow \RR$, we define the $p$-norm of $f$ as
+- \Vert f \Vert_p := (\int\limits_X f^p d \mu)^{\frac{1}{p}}
+</div>
+
+<div class="definition" markdown="1">
+
+**Definition:** Essentially Bounded
+
+A measurable function $f: X \rightarrow \RR$ is called essentially bounded if $\exists_{M >0}$ such that $\vert f(x) \vert \leq M$ for almost all $x \in X$.
+</div>
+
+
+<div class="definition" markdown="1">
+
+**Definition:** Essential Supremum
+
+The essential supremum of a measurable function $f: X \rightarrow \RR$ is defined with respect to the collection $\mathcal{Z} : = \lbrace Z \subset X \; : \: \mu(Z) = 0 \rbrace$
+- $ess sup(f):= \inf_{Z \in \mathcal{Z}} \sup_{x \in X \setminus Z} \vert f(x) \vert$
+</div>
+
+**Remark:** $\Vert f \Vert_{\infty} := ess sup(f)$ defines a norm up to the property
+- $\Vert f \Vert_{\infty} = 0 \implies f \equiv 0$
