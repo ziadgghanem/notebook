@@ -322,7 +322,4 @@ For $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map, $x_0 \in \RR^n$ is a regul
 
 Let $K \subset \RR^n$ be a compact set, and $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map. Then, the set of all regular values of $f_{\vert_K}$ is open and dense in $\RR^m$
 
-**Theorem:**  Lemma
-
-For $f : \RR^n \rightarrow \RR^m$ a $C^{\infty}$ map, $x_0 \in \RR^n$ is a regular point of $f$ if and only if $Df(x_0) : \RR^n \rightarrow \RR^m$ is surjective, otherwise it is called critical. 
 </div>
