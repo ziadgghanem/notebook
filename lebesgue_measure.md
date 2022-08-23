@@ -64,18 +64,13 @@ What remains is to show that such a family of sets $\lbrace N_r \rbrace^{\infty}
 
 **Measure on Rectangles**
 
-Let $X$ be any one of the following sets 
-- $[a,b],[a,b),(a,b],(a,b)$  
-
-And $Y$ any one of 
-- $[c,d],[c,d),(c,d],(c,d)$ 
-
-Then the set $P = X \times Y$ is called a **rectangle**.
+Let $X$ be any one of the following sets $[a,b],[a,b),(a,b],(a,b)$  <br>
+And $Y$ any one of $[c,d],[c,d),(c,d],(c,d)$. Then the set $P = X \times Y$ is called a **rectangle**. <br>
 
 In the degenerate case that either $a=b$ or $c=d$ then we say that the rectangle is *empty* and write $P = \emptyset$ 
 
 We define the measure of a rectangle $P$ as follows:
-- $\mu(P) = \begin{cases}(b-a)(d-c), \quad \text{if} \; \text{P} \neq \emptyset \\ 0, \quad \text{if} \; \text{P} = \emptyset \end{cases}$
+- $$\mu(P) = \begin{cases}(b-a)(d-c), \quad \text{if} \; \text{P} \neq \emptyset \\ 0, \quad \text{if} \; \text{P} = \emptyset \end{cases}$$
 
 </div>
 
@@ -311,7 +306,7 @@ It has been demonstrated that the measure on elementary sets is semi-$\sigma$-ad
 **Proposition:** 
 
 The measure of elementary sets is $\sigma$-additive, i.e. if $A$ is an elementary set with $A = \bigcup_{n=1}^{\infty} A_n$ where $\lbrace A_n \rbrace_{n=1}^{\infty}$ is a disjoint family of elementary sets,then
-- $\mu(A) = \sum^{\infty}_{n=1} \mu(A_{n})$ 
+- $\mu(A) = \sum_{n=1}^{\infty} \mu(A_{n})$ 
 
 </div>
 
