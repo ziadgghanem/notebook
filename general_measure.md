@@ -335,7 +335,8 @@ Let $(X,\Sigma_X,\mu)$ be a measure space, the function $f: X \rightarrow \mathb
 2. $f$ is measurable
 </div>
 
-**Remark:** If $A \subset X$ is a non-measurable set then the function $f(x) := \begin{cases} 1, \quad x \in A \\ 0, \quad x \notin A \end{cases}$ is not simple.
+**Remark:** If $A \subset X$ is a non-measurable set then the following function is not simple
+- $$f(x) := \begin{cases} 1, \quad x \in A \\ 0, \quad x \notin A \end{cases}$$
 
 <div class="proposition" markdown="1">
 
@@ -370,7 +371,7 @@ Any function,  $f: X \rightarrow \mathbb{R}$, is measurable if and only if there
 Suppose $f,g: X \rightarrow \mathbb{R}$ are measurable functions, then so are the functions
 
 1. $f + g$ 
-2. $\alpha f \; \forall_{\alpha \in \mathbb{R}$
+2. $\alpha f \; \forall_{\alpha \in \mathbb{R}}$
 3. $fg(x):= f(x)g(x)$ 
 4. $\frac{f}{g}(x):= \frac{f(x)}{g(x)}$ 
 </div>
@@ -415,12 +416,8 @@ Define the sequence of functions $\lbrace f_n: X \rightarrow \mathbb{R} \rbrace_
 
 then,
 
-\begin{eqnarray}
-\lim_{n \rightarrow \infty} f_n(x) = 
-\begin{cases} 0, \quad 0 \leq x < 1 \\ \text{DNE}, \quad x = 1 
-\end{cases}
-\end{eqnarray}
-{: style="text-align: center"}
+- $$ \lim_{n \rightarrow \infty} f_n(x) = \begin{cases} 0, \quad 0 \leq x < 1 \\ \text{DNE}, \quad x = 1 \end{cases} $$
+
 
 </div>
 
