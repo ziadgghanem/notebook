@@ -9,6 +9,7 @@ This is my notebook and these are my notes.
 
 - Degree Theory
     - [Planar Degree Theory](degree_theory.md): Course notes.
+    - [Brouwer Degree](brouwer_degree.md): Course notes.
     - [Nonlinear Analysis](nonlinear_analysis.md): Course notes.
 
 - Real Analysis
