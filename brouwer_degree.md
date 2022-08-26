@@ -3,12 +3,21 @@ layout: post
 title: 'The Brouwer Degree'
 ---
 
+# Table of contents
+1. [Formulation of the Degree](#S1)
+    1. [Additional Properties of the Degree](#S1s1)
+    2. [Degree of Linear Isomorphisms](#S1s2)
+2. [Some Fundamental Facts from Analysis](#S2)
+3. [Existence of Local Brouwer Degree](#S3)
+
+## Formulation of the Degree <a name="S1"></a>
+
 <div class="definition" markdown="1">
 
 **Definition:** Admissiblity
 
 Let $\Omega \subset \RR^n$ be an open bounded set and $f: \RR^n \rightarrow \RR^n$ a continuous map. The pair $(f, \Omega)$ is called admissible if 
-> $\forall_{x \in \partial \Omega} f(x) \neq 0$
+- $\forall_{x \in \partial \Omega} f(x) \neq 0$
 
 Equivalently, such an $f$ will be called $\Omega$-admissible
 </div>
@@ -50,15 +59,18 @@ satisfying the following three conditions
 **Remark:** A homotopy, $h: [0,1] \times \RR^n \rightarrow \RR^n$, is said to be $\Omega$-admissible if $\forall_{x \in \partial \Omega,} \forall_{t \in [0,1]} h_t(x) \neq 0$. <br/> 
 i.e. $h$ is an $\Omega$-admissible homotopy if $\forall_{t \in [0,1]} (h_t, \Omega) \in \mathcal{M}(\RR^n)$.
 
-### Additional Properties of the Degree
+### Additional Properties of the Degree <a name="S1s1"></a>
 
 <div class="proposition" markdown="1">
 
 **Proposition:** Empty-set Lemma
 
 $(f, \emptyset)$ is always an admissible pair for any $f: \RR^n \rightarrow \RR^n$ and
-$$deg(f, \emptyset) = 0$$
 
+\begin{eqnarray}
+deg(f, \emptyset) = 0
+\end{eqnarray}
+{: style="text-align: center"}
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
@@ -72,8 +84,8 @@ Indeed, we have the following truisms
 So, by additivity of the degree
 
 $$
-\begin{align}
 \Large
+\begin{align}
 deg(f, \emptyset) & = deg(f, \emptyset) + deg(f, \emptyset) \\
  & = deg(f, \emptyset) = 0 \; \square
 \end{align}
@@ -88,9 +100,11 @@ $$
 
 **Proposition:** Existence Property
 
-For $(f, \Omega) \in \mathcal{M}(\RR^n)$, 
-- if $deg(f, \Omega) \neq 0$ then $\exists_{x_0 \in \Omega}$ with $f(x_0) = 0$
+For $(f, \Omega) \in \mathcal{M}(\RR^n)$, if $deg(f, \Omega) \neq 0$ then 
 
+\begin{eqnarray}
+\exists_{x_0 \in \Omega} \text{with} f(x_0) = 0\end{eqnarray}
+{: style="text-align: center"}
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
@@ -124,8 +138,9 @@ $$
 **Proposition:** Excision Property
 
 For $(f, \Omega) \in \mathcal{M}(\RR^n)$, 
-- if $(f^{(-1)}(0) \cap \Omega) \subset \Omega_1$, for $\Omega_1 \subset \Omega$, open,  
-    - then $deg(f, \Omega) = \deg(f, \Omega_1)$
+
+if $(f^{(-1)}(0) \cap \Omega) \subset \Omega_1$, for $\Omega_1 \subset \Omega$, open,  
+- then $deg(f, \Omega) = \deg(f, \Omega_1)$
 
 
 <details>
@@ -133,7 +148,7 @@ For $(f, \Omega) \in \mathcal{M}(\RR^n)$,
 
 <div class="proof" markdown="1">
 
-Again, using additivity of the degree with $\Omega_2 = \empty$
+Again, using additivity of the degree with $\Omega_2 = \emptyset$
 
 $$
 \begin{align}
@@ -206,7 +221,7 @@ This is an immediate consequence of the Rouche property.
 
 </div>
 
-### Degree of Linear Isomorphisms
+### Degree of Linear Isomorphisms <a name="S1s2"></a>
 
 The general linear group, $GL(n,\RR):= \lbrace A: \RR^n \rightarrow \RR^n \; : \; A \text{is a linear isomorphism} \rbrace$, has two connected components
 
@@ -271,7 +286,7 @@ $$
 
 </div>
 
-## Some Fundamental Facts from Analysis
+## Some Fundamental Facts from Analysis <a name="S2"></a>
 
 <div class="proposition" markdown="1">
 
@@ -362,14 +377,14 @@ Let $U \subset \RR^n$ be an open set, and $f : \RR^n \rightarrow \RR^m$ $(n\leq 
 
 </div>
 
-## Existence of Local Brouwer Degree
+## Existence of Local Brouwer Degree <a name="S3"></a>
 
 In this section we will prove the existence and uniqueness of the Local Brouwer Degree, i.e. the existence and uniqueness of a function
 - $deg: \mathcal{M} \rightarrow \ZZ$
 
 satisfying the additivity, homotopy, and normalization properties of a degree.
 
-As a point of departure, we remark that the class of continuous maps is much too course to work with. It would be advantageous if we could restrict our attention to a finer class of 'well-behaved' functions, say, the class of smooth, regular maps.
+As a point of departure, we remark that the space of continuous maps is much too broad a class to work with. It would be advantageous if we could restrict our attention to a finer class of 'well-behaved' functions, say, the space of smooth, regular maps.
 
 <div class="definition" markdown="1">
 
@@ -413,10 +428,47 @@ Now, by construction:
 </div>
 </details>
 
-And so, we may in general assume that, if $(f, \Omega) \in \mathcal{M}(\RR^n)$, then $f$ is regular in $\Omega$ such that
+And so, we may in general assume that, if $(f, \Omega) \in \mathcal{M}(\RR^n)$, then $f$ is regular in $\Omega$ and in particular
 - $f^{-1}(0) \cap \Omega = \lbrace x_1, \ldots, x_n \rbrace$
 
-Now we may proceed by deriving a formula for the degree of smooth, regular, admissible maps which will serve as a provisional asatz, before proving existence and uniqueness. 
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+Given a continuous map, $f: \RR^n \rightarrow \RR^n$, and $x_0 \in \RR^n$ such that
+1. $f(x_0) = 0$
+2. $Df(x_0) : \RR^n \rightarrow \RR^n$ exists
+3. $Df(x_0) : \RR^n \rightarrow \RR^n$ is an isomorphism
+
+Then, for some $\delta > 0$, the map $f_0(x):= Df(x_0)(x - x_0)$ is $B_{\delta}(0)$-admissibly homotopic to $f(x)$
+</div>
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+Take for a candidate homotopy the map
+- $h(t,x) := t f(x) + (1-t) Df(x_0)(x - x_0)$
+
+and assume for contradiction that 
+By Weierstrass Theorem, there exists a smooth $\epsilon$-approximation $\tilde{f}$ such that $\sup_{x \in \overline{\Omega}} \vert f(x) - \tilde{f}(x) \vert < \epsilon$
+
+Next, take $\tilde{\epsilon} := \inf_{x \in \partial \Omega} \vert \tilde{f}(x) \vert$. By Sard's Lemma, the set of regular values of ${\tilde{f}_\vert}_{\overline{\Omega}}$ is open and dense in $\RR^n$, so we may choose a regular value $y_0 \in \RR^n$ with $\vert y_0 \vert < \tilde{\epsilon}$. 
+
+Finally, consider the map $f_0: \RR^n \rightarrow \RR^n$ given by 
+- $f_0(x) := \tilde{f}(x) - y_0$ 
+
+Now, by construction:
+1. $f_0$ is smooth
+2. $(f_0, \Omega) \in \mathcal{M}(\RR^n)$
+3. $deg(f_0, \Omega) = deg(\tilde{f}, \Omega) = deg(f, \Omega)$
+4. $f_{0 \vert_{\overline{\Omega}}}$ has $0$ as a regular value.
+
+</div>
+</details>
+
+We will proceed by positing an ansatz formula for the degree of smooth, regular, admissible maps.
 
 <div class="definition" markdown="1">
 
@@ -429,15 +481,37 @@ Given $(f, \Omega) \in \mathcal{M}(\RR^n)$, a smooth and regular $\Omega$-admiss
 
 <div class="proposition" markdown="1">
 
-**Lemma:**  Regular Approximation
+**Theorem:** Existence of Degree
 
-Given a continuous map, $f: \RR^n \rightarrow \RR^n$, and $x_0 \in \RR^n$ such that
-1. $f(x_0) = 0$
-2. $Df(x_0) : \RR^n \rightarrow \RR^n$ exists
-3. $Df(x_0) : \RR^n \rightarrow \RR^n$ is an isomorphism
+There exists a function, $deg: \mathcal{M} \rightarrow \ZZ$, satisfying the properties of a degree.
 
-Then, for some $\delta > 0$, the map $f_0(x):= Df(x_0)(x - x_0)$ is $B_{\delta}(0)$-admissibly homotopic to $f(x)$
 </div>
+
+For a given admissible pair $(f, \Omega)$, in $\RR^n$, choose a regular $\epsilon$-approximation $f_0: \RR^n \rightarrow \RR^n$ of $f$ on $\overline{\Omega}$ and put
+
+\begin{eqnarray}
+deg(f, \Omega) := \sum_{x \in f^{-1}_0 \cap \Omega} sgn \det D f_0(x)
+\end{eqnarray}
+{: style="text-align: center"}
+
+We must now prove
+1. that the proposed degree does not depend on the choice of $\epsilon$-approximation, and
+2. that the formula satisfies the degree properties.
+
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+Given $(f, \Omega)$, $(g, \Omega)$, two admissible pairs in $\RR^n$, such that
+1. $f,g$ are regular in $\Omega$
+2. there exists an $\Omega$-admissible homotopy between $f$ and $g$
+
+then, for some $0 < \delta < \frac{1}{2}$, there exists a smooth $\Omega$-admissible homotopy $h_t: \RR^n \rightarrow \RR^n$ such that
+1. $0$ is a regular value of ${h_\vert}_{[0,1] \times \Omega}$ i.e. $\forall_{(t,x) \in h^{-1}(0) \cap [0,1] \times \Omega} Dh(t,x): \RR^{n+1} \rightarrow \RR^n$ is surjective
+2. $$h(t,x) = \begin{cases} f(x) & \text{if } 0 \leq t \leq \delta \\ g(x) & \text{if } 0 \leq 1-t \leq \delta \end{cases}$$
+</div>
+
+
 
 <details>
 <summary><i style="font-size:150%;">Proof</i></summary>
