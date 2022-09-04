@@ -3,7 +3,6 @@ layout: post
 title: 'The Brouwer Degree'
 ---
 
-# Table of contents
 1. [Formulation of the Degree](#S1)
     1. [Additional Properties of the Degree](#S1s1)
     2. [Degree of Linear Isomorphisms](#S1s2)

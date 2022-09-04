@@ -3,14 +3,14 @@ layout: post
 title: Notebook
 ---
 
-This is my notebook and these are my notes. 
+These are my notes
 
 ## Course Notes
 
 - Degree Theory
-    - [Planar Degree Theory](degree_theory.md): Course notes.
-    - [Brouwer Degree](brouwer_degree.md): Course notes.
-    - [Nonlinear Analysis](nonlinear_analysis.md): Course notes.
+    - [Planar Degree Theory](degree_theory.md): 
+    - [Brouwer Degree](brouwer_degree.md): 
+    - [Nonlinear Analysis](nonlinear_analysis.md): 
 
 - Real Analysis
     - [Real Numbers](real_numbers.md)
@@ -19,7 +19,12 @@ This is my notebook and these are my notes.
     - [Lebesgue Integration](lebesgue_integration.md)
     - [Lebesgue Spaces](lebesgue_spaces.md)
 
-- [Functional Analysis](functional_analysis.md): Course notes.
+- Functional Analysis
+    - [Functional Analysis](functional_analysis.md): 
 
-- [Algebraic Topology](algebraic_topology.md): Course notes.
+- Appendix
+    - [Topology](topology.md)
+    - [Lie Groups](lie_groups.md)
+    - [Equivariant Algebra](equivariant_theory.md)
+
 
