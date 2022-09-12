@@ -25,6 +25,6 @@ These are my notes
 - Appendix
     - [Topology](topology.md)
     - [Lie Groups](lie_groups.md)
-    - [Equivariant Algebra](equivariant_theory.md)
+    - [Equivariant Algebra](equivariant_marginalia.md)
 
 
