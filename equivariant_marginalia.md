@@ -19,12 +19,14 @@ Two subgroups, $H \leq G$ and $K \leq G$, are said to be conjugate, denoted $H \
 </div>
 
 We denote by $(H)$ the conjugacy class of $H \leq G$
+
 \begin{eqnarray}
 (H) &:= \lbrace K \leq G \; : \; H \sim K \rbrace
 \end{eqnarray}
 {: style="text-align: center"}
 
 Notice that conjugacy is an equivalence relation on the space of subgroups of $G$. We put
+
 \begin{eqnarray}
 \Phi(G) &:= \lbrace (H) \; : \; H \leq G \rbrace
 \end{eqnarray}
@@ -43,16 +45,18 @@ In the context of the conjugacy relation we propose the following lemma.
 
 **Lemma:** 
 
-$H \unlhd G$ if and only if $H \sim K \implies K = G$
+$H \mathrel{\unlhd} G$ if and only if $H \sim K \implies K = G$
 </div>
 
 We might also consider the conjugacy of group elements. Denote the conjugacy of $h \in G$ with
+
 \begin{eqnarray}
 Cl_{G}(h) &:= \lbrace ghg^{-1} \; : \; g \in G \rbrace
 \end{eqnarray}
 {: style="text-align: center"}
 
 Recall, the center of $G$ is the set
+
 \begin{eqnarray}
 Z(G) &:= \lbrace h \in G \; : \; gh=hg \; \forall_{g \in G} \rbrace
 \end{eqnarray}
@@ -88,18 +92,21 @@ hence, $Cl_{G}(h) \subset H$. The other inclusion is immediate.
 </div>
 
 Let $H \leq G$, the centralizer of $H$ is the subgroup
+
 \begin{eqnarray}
 C_{G}(H) &:= \lbrace g \in G \; : \; ghg^{-1} = h \; \forall_{h \in H} \rbrace
 \end{eqnarray}
 {: style="text-align: center"}
 
 Likewise, the centralizer of a group element $h \in G$ is the subgroup
+
 \begin{eqnarray}
 C_{G}(h) &:= \lbrace g \in G \; : \; ghg^{-1} = h \rbrace
 \end{eqnarray}
 {: style="text-align: center"}
 
 Finally, we introduce the normalizer of $H \leq G$, which is the subgroup
+
 \begin{eqnarray}
 N_{G}(H) &:= \lbrace g \in G \; : \; gHg^{-1} = H \rbrace
 \end{eqnarray}
@@ -118,14 +125,18 @@ $C_{G}(H) \mathrel{\unlhd} N_{G}(H)$
 
 Let $x \in C_{G}(H)$ and $y \in N_{G}(H)$. We will show that $yxy^{-1} \in C_{G}(H)$.
 
-Choose $h \in H$, then $y^{-1}hy \in H$ such that $x^{-1}(y^{-1}hy)x = y^{-1}hy$. Hence,
- 
+Choose $h \in H$, then $y^{-1}hy \in H$ such that $x^{-1}(y^{-1}hy)x = y^{-1}hy$. \\
+Hence,
+
+{\Large
 $$
 \begin{align}
 (yxy^{-1}) h (yxy^{-1})^{-1} & = yx (y^{-1} hy)x^{-1} y^{-1} \\
  & = yy^{-1} h y y^{-1} = h
 \end{align}
 $$
+}%
+
 
 i.e. $yxy^{-1} \in C_{G}(H)$
 
@@ -152,6 +163,7 @@ is called a $G$-action if it satisfies the following conditions
 If $X$ is, in addition, a Hausdorff space, then $X$ is said to be a **$G$-space**.
 
 For a $G$-space $X$ and for any $g \in G$, define the map $T_g: X \rightarrow X$ by
+
 \begin{eqnarray}
 T_g(x) = gx
 \end{eqnarray}
@@ -190,35 +202,11 @@ J_x(g) = gx
 
 In this section, we let $X$ denote a $G$-space.
 
-Let $S \subset X$, we will use the following notation for $g \in G$:
-
-\begin{eqnarray}
-gS := \lbrace gx \; : \; x \in S \rbrace
-\end{eqnarray}
-{: style="text-align: center"}
-
-and for $H \subset G$ (not necessarily a subgroup) we put
-
-\begin{eqnarray}
-HS := \bigcup_{g \in H} gS
-\end{eqnarray}
-{: style="text-align: center"}
-
-<div class="proposition" markdown="1">
-
-**Proposition:** 
-
-Let $S \subset X$ and $H \subset G$, then
-1. If $S$ is open, so is $HS$
-2. If $H$ is closed and $S$ compact, $HS$ is compact
-3. If $S$, $H$ are both closed, so is $HS$
-</div>
-
 <div class="definition" markdown="1">
 
 **Definition:** Isotropy Group (Stabilizer)
 
-We define the isotropy group of $x \in X$ as the set of elements in $G$ which fix $x$, i.e.
+We define the isotropy group of $x \in X$, $G_x$, as the set of elements in $G$ which fix $x$, i.e.
 
 \begin{eqnarray}
 G_x := \lbrace g \in G \; : \; gx = x \rbrace 
@@ -226,6 +214,38 @@ G_x := \lbrace g \in G \; : \; gx = x \rbrace
 {: style="text-align: center"}
 </div>
 
+A $G$-action on $X$ is called free if
+
+\begin{eqnarray}
+\forall_{x \in X} G_x = \lbrace {e} \rbrace
+\end{eqnarray}
+{: style="text-align: center"}
+
+it is called semi-free if
+
+\begin{eqnarray}
+\forall_{x \in X} G_x = \lbrace {e} \rbrace \lor G_x = G
+\end{eqnarray}
+{: style="text-align: center"}
+
+And, it is called faithful if
+
+\begin{eqnarray}
+\forall_{g \in G} \exists_{x \in X} gx \neq x
+\end{eqnarray}
+{: style="text-align: center"}
+
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+A $G$-action on $X$ is faithful if and only if
+
+\begin{eqnarray}
+\bigcap_{x \in X} G_x = \lbrace e \rbrace
+\end{eqnarray}
+{: style="text-align: center"}
+</div>
 
 <div class="proposition" markdown="1">
 
@@ -241,11 +261,13 @@ $G_x$ is a closed subgroup of $G$
 That $G_x \mathrel{\unlhd} G$ is clear. We will prove that $G_x$ is, in addition, closed. Indeed, put
 
 $$
+{\Large
 \begin{align}
 G_x & := \lbrace g \in G \; : \; gx = x \rbrace \\
  & = \lbrace g \in G \; : \; J_x(g) = x \rbrace \\
  & = J_x^{-1}(x)
 \end{align}
+}%
 $$
 
 As the continuous pre-image of a closed set, $G_x$ is therefore closed.
@@ -253,35 +275,7 @@ As the continuous pre-image of a closed set, $G_x$ is therefore closed.
 </details>
 </div>
 
-<div class="proposition" markdown="1">
-
-**Lemma:** 
-
-The isotropy group of $gx \in X$ is conjugate to that of $x \in X$ by the element $g \in G$, i.e.
-
-\begin{eqnarray}
-G_{gx} := g G_x g^{-1}
-\end{eqnarray}
-{: style="text-align: center"}
-
-<details>
-<summary><i style="font-size:150%;">Proof</i></summary>
-
-<div class="proof" markdown="1">
-
-$$
-\begin{align}
-G_{gx} & := \lbrace h \in G \; : \; h(gx) = gx \rbrace \\
- & = \lbrace h \in G \; : \; g^{-1}h(gx) = g^{-1}gx \rbrace \\
- & = \lbrace h \in G \; : \; g^{-1}hg \in G_x \rbrace \\
- & = \lbrace h \in G \; : \; h \in g G_x g^{-1} \rbrace \\
- & = g G_x g^{-1}
-\end{align}
-$$
-
-</div>
-</details>
-</div>
+For a given $x \in X$, we call the conjugacy class, $(G_x)$, the orbit type of $x$.
 
 <div class="definition" markdown="1">
 
@@ -306,10 +300,10 @@ $G(x) \subset X$ is compact.
 
 <div class="proof" markdown="1">
 
-Indeed, take $x \in X$, then the orbit can be equivalently defined as the range of the action-map $S_x: G \rightarrow X$
+Indeed, take $x \in X$, then the orbit can be equivalently defined as the range of the action-map $J_x: G \rightarrow X$
 
 \begin{eqnarray}
-G(x) = S_x(G)
+G(x) = J_x(G)
 \end{eqnarray}
 {: style="text-align: center"}
 
@@ -318,3 +312,91 @@ Therefore, $G(x)$ is compact as the continuous image of a compact space.
 </div>
 </details>
 </div>
+
+
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+The isotropy group of elements in the same orbit, $x,gx \in X$ are conjugate by the element $g \in G$, i.e.
+
+\begin{eqnarray}
+G_{gx} := g G_x g^{-1}
+\end{eqnarray}
+{: style="text-align: center"}
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+$$
+{\Large
+\begin{align}
+G_{gx} & := \lbrace h \in G \; : \; h(gx) = gx \rbrace \\
+ & = \lbrace h \in G \; : \; g^{-1}h(gx) = g^{-1}gx \rbrace \\
+ & = \lbrace h \in G \; : \; g^{-1}hg \in G_x \rbrace \\
+ & = \lbrace h \in G \; : \; h \in g G_x g^{-1} \rbrace \\
+ & = g G_x g^{-1}
+\end{align}
+}%
+
+$$
+
+</div>
+</details>
+</div>
+
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+The set of orbits $\lbrace G(x) \; : \; x \in X \rbrace$ is a partition on $X$.
+</div>
+
+Let $A \subset X$, we will use the following notation for $g \in G$:
+
+\begin{eqnarray}
+gA := \lbrace gx \; : \; x \in A \rbrace = $T_g(A)$
+\end{eqnarray}
+{: style="text-align: center"}
+
+and for $H \mathrel{\unlhd} G$ we put
+
+\begin{eqnarray}
+HA := \bigcup_{g \in H} gA
+\end{eqnarray}
+{: style="text-align: center"}
+
+A set $A \subset X$ is called $G$-invariant if $$
+
+\begin{eqnarray}
+GA = A
+\end{eqnarray}
+{: style="text-align: center"}
+
+and $A$ is said to be $H$-invariant for $H \leq G$ if
+
+\begin{eqnarray}
+HA = A
+\end{eqnarray}
+{: style="text-align: center"}
+
+<div class="proposition" markdown="1">
+
+**Proposition:** 
+
+Let $S \subset X$ and $H \subset G$, then
+1. If $S$ is open, so is $HS$
+2. If $H$ is closed and $S$ compact, $HS$ is compact
+3. If $S$, $H$ are both closed, so is $HS$
+</div>
+
+<hr>
+
+We denote by, $\Phi(G)$, the set of all conjugacy classes of subgroups in $G$
+
+\begin{eqnarray}
+\Phi(G) = \lbrace (H) \; H \leq G \rbrace
+\end{eqnarray}
+{: style="text-align: center"}
