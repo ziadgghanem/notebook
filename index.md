@@ -3,7 +3,7 @@ layout: post
 title: Notebook
 ---
 
-These are my notes
+These are my some of my notes
 
 ## Course Notes
 
@@ -25,6 +25,6 @@ These are my notes
 - Appendix
     - [Topology](topology.md)
     - [Lie Groups](lie_groups.md)
-    - [Equivariant Algebra](equivariant_marginalia.md)
+    - [Equivariant Marginalia](equivariant_marginalia.md)
 
 
