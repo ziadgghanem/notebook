@@ -38,7 +38,7 @@ In the case that $X$ is a Hausdorff topological space, the $G$-action is a conti
 
 For the remainder of the section, $X$ will denote a $G$-space.
 
-We now introduce the transformation map $T_g: X \rightarrow X$, induced by the $G$-action on $X$ and the group element $g \in G$, with the definition
+We now introduce the **translation** map $T_g: X \rightarrow X$, induced by the $G$-action on $X$ and the group element $g \in G$, with the definition
 
 \begin{eqnarray}
 T_g(x) = gx
@@ -77,9 +77,7 @@ satisfying conditions equivalent to those of the $G$-action
 1. $T_h \circ T_g = T_{hg}, \; \forall_{h,g \in G}$
 2. $T_e(x) = x, \; \forall_{x \in X}$
 
-Alternatively, for any $x \in X$, we consider the map $S_x: G \rightarrow X$ defined by 
-
-Alternatively, for any $x \in X$, we consider the **continuous** map $S_x: G \rightarrow X$ defined by 
+Alternatively, for any $x \in X$, we consider the **action** map $S_x: G \rightarrow X$ defined by 
 
 \begin{eqnarray}
 S_x(g) = gx
@@ -139,7 +137,7 @@ G_x & := \lbrace g \in G \; : \; gx = x \rbrace \\
 \end{align}
 $$
 
-As $X$ is in particular Hausdorff, singleton sets are closed and, as the continuous pre-image of a closed set, $G_x$ is therefore closed. 
+As $X$ is a Hausdorff space, singleton subsets are closed and, as the continuous pre-image of a closed set, $G_x$ is therefore closed. 
 
 </div>
 </details>
@@ -177,6 +175,17 @@ Let's introduce some convenient notation before we move forward.
 2. For $H \leq G$, we put
     - $HA := \bigcup_{g \in H} gA$
 
+
+<div class="proposition" markdown="1">
+
+**Proposition:** 
+
+Let $A \subset X$ and $H \leq G$, then
+1. If $A$ is open, so is $HA$
+2. If $H$ is closed and $A$ compact, $HA$ is compact
+3. If $A$, $H$ are both closed, so is $HA$
+</div>
+
 <div class="definition" markdown="1">
 
 **Definition:** $G$-invariance
@@ -189,11 +198,68 @@ Let's introduce some convenient notation before we move forward.
 
 For $H \leq G$ a closed subgroup of $G$, consider the following subsets of $X$
 1. $X_H := \lbrace x \in X \; : \; G_x = H \rbrace$
-2. $X^H := \lbrace x \in X \; : \; G_x \supset H \rbrace$
+2. $X^H := \lbrace x \in X \; : \; G_x \geq H \rbrace$
+
+$X^H$ is called the $H$-fixed point subspace of $X$. 
+
+Notice that $X_H \subset X^H$.
+
+<div class="proposition" markdown="1">
+
+**Proposition:** 
+
+The following is an equivalent definition of the $H$-fixed point space
+- $X^H = \lbrace x \in X \; : \; \forall_{g \in H} gx = x \rbrace$
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+Until we prove their equality we will use the following symbols for clarity
+1. $X^H := \lbrace x \in X \; : \; G_x \geq H \rbrace$
+2. $\tilde{X}^H = \lbrace x \in X \; : \; \forall_{g \in H} gx = x \rbrace$
+
+Take $x \in X^H$ such that $H \leq G_x$ then clearly, $\forall_{g \in H} gx = x$ and so $X^H \subset \tilde{X}^H$
+
+Now take $x \in \tilde{X}^H$ such that $\forall_{g \in H} gx = x$ then, if $g \in H$ then $g \in G_x$, i.e. $H \subset G_x$, and as $H \leq G$ we have $H \leq G_x$ 
+
+Hence, $\tilde{X}^H = X^H$
+
+</div>
+</details>
+</div>
+
+<div class="proposition" markdown="1">
+
+**Lemma:** 
+
+If $H \leq K$ then $X^K \subset X^H$
+
+</div>
+
+Notice that $X^G = \lbrace x \in X \; : \; \forall_{g \in G} gx = x \rbrace$ and for any subgroup $H \leq G$ we have $X^G \subset X^H$.
+
+For what follows, one might refer to the [appendix](#SA) for the definitions of the normalizer, Weyl group, and other notions.
+
+<div class="proposition" markdown="1">
+
+**Proposition:** 
+
+$X^H$ is an $N(H)$-invariant subspace, i.e.
+- $\forall_{g \in N(H)} gX^H \subset X^H$
+</div>
+
+<div class="proposition" markdown="1">
+
+**Corollary:** 
+
+$W(H)$ acts freely on $X^H$, i.e. for any $x \in X$ the isotropy group of $x$ is either trivial or all of $W(H)$
+</div>
 
 <hr>
 
-### $G$-Orbits and $G$-Invariance <a name="S1s3"></a>
+### $G$-Orbits <a name="S1s3"></a>
 
 <div class="definition" markdown="1">
 
@@ -363,17 +429,6 @@ For $x \in X$, we will call the conjugacy class, $(G_x)$, the orbit type of $x$
 
 </div>
 
-<div class="Definition" markdown="1">
-
-**Definition:** The Weyl Group
-
-Denote by $N(H)$ the normalizer of $H \leq G$. The Weyl group, $W(H)$ is defined
-
-\begin{eqnarray}
-W(H):= \frac{N(H)}{H}
-\end{eqnarray}
-{: style="text-align: center"}
-</div>
 
 We introduce the following notions
 1. Denote by, $\Phi(G)$, the set of all conjugacy classes of closed subgroups in $G$
@@ -448,7 +503,6 @@ For $H \leq G$ a closed subgroup of $G$, consider the following subsets of $X$
 2. $X^H := \lbrace x \in X \; : \; G_x \supset H \rbrace$
 3. $X_{(H)} := \lbrace x \in X \; : \; (G_x) = (H) \rbrace$
 4. $X^{(H)} := \lbrace x \in X \; : \; (G_x) \geq (H) \rbrace$
-
 
 
 # Appendix <a name="SA"></a>
@@ -558,6 +612,8 @@ N_{G}(H) &:= \lbrace g \in G \; : \; gHg^{-1} = H \rbrace
 \end{eqnarray}
 {: style="text-align: center"}
 
+When the context is clear, we will denote these subgroups, respectively, as $C(H), C(h), N(H)$.
+
 <div class="proposition" markdown="1">
 
 **Lemma:** 
@@ -569,20 +625,17 @@ $C_{G}(H) \mathrel{\unlhd} N_{G}(H)$
 
 <div class="proof" markdown="1">
 
-Let $x \in C_{G}(H)$ and $y \in N_{G}(H)$. We will show that $yxy^{-1} \in C_{G}(H)$.
+Let $x \in C_{G}(H)$ and $y \in N_{G}(H)$. It is sufficient to demonstrate the subgroup criterion, i.e. that $yxy^{-1} \in C_{G}(H)$.
 
 Choose $h \in H$, then $y^{-1}hy \in H$ such that $x^{-1}(y^{-1}hy)x = y^{-1}hy$. \\
 Hence,
 
-{\Large
 $$
 \begin{align}
 (yxy^{-1}) h (yxy^{-1})^{-1} & = yx (y^{-1} hy)x^{-1} y^{-1} \\
  & = yy^{-1} h y y^{-1} = h
 \end{align}
 $$
-}%
-
 
 i.e. $yxy^{-1} \in C_{G}(H)$
 
@@ -590,13 +643,14 @@ i.e. $yxy^{-1} \in C_{G}(H)$
 </details>
 </div>
 
+<div class="Definition" markdown="1">
 
-<div class="proposition" markdown="1">
+**Definition:** The Weyl Group
 
-**Proposition:** 
+For $H \leq G$, the Weyl group, $W(H)$, is defined
 
-Let $S \subset X$ and $H \subset G$, then
-1. If $S$ is open, so is $HS$
-2. If $H$ is closed and $S$ compact, $HS$ is compact
-3. If $S$, $H$ are both closed, so is $HS$
+\begin{eqnarray}
+W(H):= \frac{N(H)}{H} = \lbrace gH \; : \; g \in N(H) \rbrace
+\end{eqnarray}
+{: style="text-align: center"}
 </div>
