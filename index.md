@@ -26,5 +26,6 @@ These are my some of my notes
     - [Topology](topology.md)
     - [Lie Groups](lie_groups.md)
     - [Equivariant Marginalia](equivariant_marginalia.md)
+    - [Topological Dynamics](topological_dynamics.md)
 
 
