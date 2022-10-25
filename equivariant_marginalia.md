@@ -224,7 +224,8 @@ Take $x \in X^H$ such that $H \leq G_x$ then clearly, $\forall_{g \in H} gx = x$
 
 Now take $x \in \tilde{X}^H$ such that $\forall_{g \in H} gx = x$ then, if $g \in H$ then $g \in G_x$, i.e. $H \subset G_x$, and as $H \leq G$ we have $H \leq G_x$ 
 
-Hence, $\tilde{X}^H = X^H$
+Hence, 
+- $\tilde{X}^H = X^H$
 
 </div>
 </details>
@@ -242,12 +243,33 @@ Notice that $X^G = \lbrace x \in X \; : \; \forall_{g \in G} gx = x \rbrace$ and
 
 For what follows, one might refer to the [appendix](#SA) for the definitions of the normalizer, Weyl group, and other notions.
 
+In general, for $H \leq G$, the $H$-fixed point set, $X^H$ is not $G$-invariant and so it cannot be a $G$-space. Instead, we will demonstrate that $X^H$ is a $W(H)$-space, where $W(H) = N(H)/H$ is the Weyl group of $H$.
+
 <div class="proposition" markdown="1">
 
 **Proposition:** 
 
 $X^H$ is an $N(H)$-invariant subspace, i.e.
 - $\forall_{g \in N(H)} gX^H \subset X^H$
+
+<details>
+<summary><i style="font-size:150%;">Proof</i></summary>
+
+<div class="proof" markdown="1">
+
+We want to show that, for any $n \in N(H)$ and for any $x \in X$
+- $nx \in X^H$
+
+Choose $n \in N(H)$ and $h \in H$, then 
+- $n^{-1}hn = \tilde{h}$ for some $\tilde{h} \in H$ such that $hn = n \tilde{h}$. 
+
+Now, recall that $H$ acts trivially on $X^H$, in particular $\tilde{h}x = hx = x$. In which case,
+- $nx = n (\tilde{h} x) = (n \tilde{h})x = (hn)x = h(nx)$
+
+Hence, $\forall_{n \in N(H), \; x \in X^H}$ and $\forall_{h \in H}$ $hnx = nx$, i.e. $$
+
+</div>
+</details>
 </div>
 
 <div class="proposition" markdown="1">
